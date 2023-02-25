@@ -5,10 +5,10 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 export GREEN='\033[0;32m';
-RED="\033[0;31m" 
+RED="\033[0;31m"
 COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
 COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"  
-WH='\033[1;37m'                  
+WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
 ipes=$(curl -sS ipv4.icanhazip.com)
@@ -84,7 +84,7 @@ fi
 function botonoff(){
 clear
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1                  • BOT PANEL •                   $NC"
+echo -e "$WH                  • BOT PANEL •                   $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 dircreate
 [[ ! -f /root/tarap/bot.conf ]] && {
@@ -101,7 +101,7 @@ echo "Admin_ID: $adm_ids" >>/root/ResBotAuth
 }
 echo -ne " NAMA BOT : "
 read bot_user
-[[ -z $bot_user ]] && bot_user="TARAP-KUHING_Bot"
+[[ -z $bot_user ]] && bot_user="MASWAY_Bot"
 echo ""
 echo -ne " LIMIT     : "
 read limit_pnl
@@ -125,7 +125,7 @@ screen -dmS sam_bot bbt >/dev/null 2>&1
 fun_bot1
 [[ $(ps x | grep "sam_bot" | grep -v grep | wc -l) != '0' ]] && {
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1                  • BOT PANEL •                   $NC"
+echo -e "$WH                  • BOT PANEL •                   $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e " [INFO]  Bot successfully activated !" 
@@ -136,7 +136,7 @@ read -n 1 -s -r -p " Press any key to back on menu"
 m-bot
 } || {
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1                  • BOT PANEL •                   $NC"
+echo -e "$WH                  • BOT PANEL •                   $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e " [INFO] Information not valid !"
@@ -158,7 +158,7 @@ sleep 1
 }
 fun_bot2
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1                  • BOT PANEL •                   $NC"
+echo -e "$WH                  • BOT PANEL •                   $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e " [INFO] Bot Stoped Successfully"
@@ -171,7 +171,7 @@ m-bot
 }
 clear
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
-echo -e "$COLBG1                  • BOT PANEL •                   $NC"
+echo -e "$                  • BOT PANEL •                   $NC"
 echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e "   [01]$NC • Start & Stop Bot"
