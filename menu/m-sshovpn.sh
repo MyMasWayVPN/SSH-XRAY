@@ -70,27 +70,26 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SSH PANEL MENU •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}
- $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD SSH         ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}USERS LIST${NC}     $COLOR1 $NC
- $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL SSH       ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}DELETE USERS EXP${NC}$COLOR1 $NC
- $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW SSH       ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}SET AUTOKILL${NC}    $COLOR1 $NC
- $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}CEK MULTI LOGIN${NC} $COLOR1 $NC
- $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CHECK USERS     $COLOR1 $NC
- $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}                 ${WH}• SSH PANEL MENU •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ┌───────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}[ 01$]${NC}  • ${WH}ADD SSH$${NC}"
+echo -e "  ${WH}[ 02$]${NC}  • ${WH}TRIAL SSH${NC}"
+echo -e "  ${WH}[ 03$]${NC}  • ${WH}RENEW SSH${NC}"
+echo -e "  ${WH}[ 04$]${NC}  • ${WH}DELETE SSH${NC}"
+echo -e "  ${WH}[ 05$]${NC}  • ${WH}CHECK USERS$NC"
+echo -e "  ${WH}[ 06$]${NC}  • ${WH}USERS LIST$NC"
+echo -e "  ${WH}[ 07$]${NC}  • ${WH}DELETE USERS EXP$NC"
+echo -e "  ${WH}[ 08$]${NC}  • ${WH}SET AUTOKILL$NC"
+echo -e "  ${WH}[ 09$]${NC}  • ${WH}CEK MULTI LOGIN$NC"
+echo -e "  ${WH}[ 00$]${NC}  • ${WH}GO BACK${NC}"
+echo -e "  └───────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 01 | 1) clear ; usernew ; exit ;;
 02 | 2) clear ; trial ; exit ;;

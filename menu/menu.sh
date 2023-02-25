@@ -123,7 +123,7 @@ fi
 # // SSH Websocket Proxy
 ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $ssh_ws == "running" ]]; then
-    status_ws="${COLOR1}ON${NC}"
+    status_ws=" ON${NC}"
 else
     status_ws="${RED}OFF${NC}"
 fi
@@ -131,7 +131,7 @@ fi
 # // nginx
 nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $nginx == "running" ]]; then
-    status_nginx="${COLOR1}ON${NC}"
+    status_nginx=" ON${NC}"
 else
     status_nginx="${RED}OFF${NC}"
 fi
@@ -139,7 +139,7 @@ fi
 # // SSH Websocket Proxy
 xray=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
 if [[ $xray == "running" ]]; then
-    status_xray="${COLOR1}ON${NC}"
+    status_xray=" ON${NC}"
 else
     status_xray="${RED}OFF${NC}"
 fi
@@ -154,11 +154,11 @@ total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc 
 function updatews(){
 clear
 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• UPDATE SCRIPT VPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}              ${WH}• UPDATE SCRIPT VPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}   [INFO]${NC} Check for Script updates"
 sleep 2
 wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/install-up.sh" && chmod +x /root/install_up.sh
 sleep 2
@@ -168,21 +168,21 @@ rm /root/install_up.sh
 rm /opt/.ver
 version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/versi )
 echo "$version_up" > /opt/.ver
-echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── BY ───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}              ${WH}• TARAP KUHING •${NC}                $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${NC}   [INFO]${NC} Successfully Up To Date!"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── BY ───────────────────────┐${NC}"
+echo -e "  ${NC}              ${WH}• MasWayVPN •${NC}                  $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 }
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• MENU PANEL VPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}                  ${WH}• PREMIUM •                  ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}                 ${WH}• MENU PANEL VPS •              ${NC}   $NC"
+echo -e "  ${NC}                    ${WH}• PREMIUM •                  ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
 upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
@@ -190,65 +190,65 @@ cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
 serverV=$( curl -sS https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/versi )
 if [ "$Isadmin" = "ON" ]; then
-uis="${COLOR1}Premium User$NC"
+uis=" Premium User$NC"
 else
-uis="${COLOR1}Premium Version$NC"
+uis=" Premium Version$NC"
 fi
-echo -e "$COLOR1 $NC ${WH}User Roles     ${COLOR1}: ${WH}$uis"
+echo -e "  $NC ${WH}User Roles      : ${WH}$uis"
 if [ "$cekup" = "day" ]; then
-echo -e "$COLOR1 $NC ${WH}System Uptime  ${COLOR1}: ${WH}$uphours $upminutes $uptimecek"
+echo -e "  $NC ${WH}System Uptime   : ${WH}$uphours $upminutes $uptimecek"
 else
-echo -e "$COLOR1 $NC ${WH}System Uptime  ${COLOR1}: ${WH}$uphours $upminutes"
+echo -e "  $NC ${WH}System Uptime   : ${WH}$uphours $upminutes"
 fi
-echo -e "$COLOR1 $NC ${WH}Memory Usage   ${COLOR1}: ${WH}$uram / $tram"
-#echo -e "$COLOR1 $NC ${WH}ISP & City     ${COLOR1}: ${WH}$ISP & $CITY"
-echo -e "$COLOR1 $NC ${WH}Current Domain ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
-echo -e "$COLOR1 $NC ${WH}IP-VPS         ${COLOR1}: ${WH}$IPVPS${NC}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status_xray} ${WH}]   ${WH}[ NGINX : ${status_nginx} ${WH}] $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday       Month   ${NC}"
-echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv     $yesterday_tx $yesterday_txv     $month_tx $month_txv   ${NC}"
-echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv     $month_rx $month_rxv   ${NC}"
-echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v    $yesterday $yesterday_v     $month $month_v  ${NC} "
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${COLOR1}      Ssh/Ovpn${NC} ${COLOR1}    Vmess       Vless    Trojan-Ws ${NC}"    
-echo -e "$COLOR1 ${WH}Total${NC}   ${WH}$total_ssh        $vmess      $vless               $trtls ${NC}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1}${status_ws}${WH}]    ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}STATUS  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}VMESS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}UPDATE  ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}VLESS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}THEME   ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}SS WS   ${WH}[${COLOR1}${status_xray}${WH}]    ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}SYSTEM  ${WH}[${COLOR1}Menu${WH}] $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1}ON${WH}]    ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}CLEAR RAM CACHE    $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• Terima Kasih Sudah Mengguanakan Script Saya •${NC}  $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  $NC ${WH}Memory Usage    : ${WH}$uram / $tram"
+#echo -e "  $NC ${WH}ISP & City      : ${WH}$ISP & $CITY"
+echo -e "  $NC ${WH}Current Domain  : ${WH}$(cat /etc/xray/domain)"
+echo -e "  $NC ${WH}IP-VPS          : ${WH}$IPVPS${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  $NC ${WH}[ SSH WS : ${status_ws} $]  ${WH}[ XRAY : ${status_xray} $]   ${WH}[ NGINX : ${status_nginx} $]   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   Traffic${NC}       Today       Yesterday       Month   ${NC}"
+echo -e "  ${WH}Download${NC}   ${WH}$today_tx $today_txv     $yesterday_tx $yesterday_txv     $month_tx $month_txv   ${NC}"
+echo -e "  ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv     $month_rx $month_rxv   ${NC}"
+echo -e "   Total${NC}       $todayd $today_v    $yesterday $yesterday_v     $month $month_v  ${NC} "
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "         Ssh/Ovpn${NC}      Vmess       Vless    Trojan-Ws ${NC}"    
+echo -e "  ${WH}Total${NC}   ${WH}$total_ssh        $vmess      $vless               $trtls ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}[ 01 ]${NC}  • ${WH}SSHWS   ${NC}[ ${status_ws}]${NC}"
+echo -e "  ${WH}[ 02 ]${NC}  • ${WH}VMESS   ${NC}[ ${status_xray}]${NC}"
+echo -e "  ${WH}[ 03 ]${NC}  • ${WH}VLESS   ${NC}[ ${status_xray}]${NC}"
+echo -e "  ${WH}[ 04 ]${NC}  • ${WH}SS WS   ${NC}[ ${status_xray}]${NC}"
+echo -e "  ${WH}[ 05 ]${NC}  • ${WH}TROJAN  ${NC}[ ON ]${NC}"
+echo -e "  ${WH}[ 06 ]${NC}  • ${WH}STATUS$NC"
+echo -e "  ${WH}[ 07 ]${NC}  • ${WH}UPDATE CACHE$NC"
+echo -e "  ${WH}[ 08 ]${NC}  • ${WH}SYSTEM CACHE$NC"              
+echo -e "  ${WH}[ 09 ]${NC}  • ${WH}CLEAR RAM CACHE$NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}• Terima Kasih Sudah Mengguanakan Script Saya •${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}REG IP  ${WH}[${COLOR1}Menu${WH}] ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}SET BOT  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
+echo -e "  ${WH}[ 11 ]${NC}  • REG IP  ${WH}[ Menu]${NC}"
+echo -e "  ${WH}[ 12 ]${NC}  • SET BOT  ${WH}[ Menu]${NC}"
 ressee="m-ip"
 bottt="m-bot"
 else
 ressee="menu"
 bottt="menu"
 fi
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 $NC ${WH}[${COLOR1}100${WH}]${NC} ${COLOR1}• ${WH}UPDATE TO V$serverV${NC}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}[ 100$]${NC}  • ${WH}UPDATE TO V$serverV${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 up2u="updatews"
 else
 up2u="menu"
@@ -258,7 +258,7 @@ DATE=$(date +'%Y-%m-%d')
 datediff() {
     d1=$(date -d "$1" +%s)
     d2=$(date -d "$2" +%s)
-    echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
+    echo -e "  $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
 }
 mai="datediff "$Exp" "$DATE""
 
@@ -269,19 +269,19 @@ d1=$(date -d "$exp" +%s)
 d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
 
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}: ${WH}$(cat /opt/.ver) Latest Version${NC}"
-echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}$Name${NC}"
-echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}$certificate days${NC}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}                 ${WH}• SEWA SCRIPT •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}                  ${WH}• PREMIUM •${NC}                    $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}             ${WH}• WA : 085754292950 •${NC}             $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐$NC"
+echo -e "  $NC ${WH}Version      : ${WH}$(cat /opt/.ver) Latest Version${NC}"
+echo -e "  $NC ${WH}Client Name  : ${WH}$Name${NC}"
+echo -e "  $NC ${WH}License      : ${WH}$certificate days${NC}"
+echo -e " └─────────────────────────────────────────────────┘$NC"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e "  ${NC}                 ${WH}• SEWA SCRIPT •${NC}                   $NC"
+echo -e "  ${NC}                  ${WH}• PREMIUM •${NC}                      $NC"
+echo -e "  ${NC}             ${WH}• WA : 085754292950 •${NC}               $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 01 | 1) clear ; m-sshovpn ;;
 02 | 2) clear ; m-vmess ;;
@@ -290,11 +290,10 @@ case $opt in
 05 | 5) clear ; m-trojan ;;
 06 | 6) clear ; running ;;
 07 | 7) clear ; m-update ;;
-08 | 8) clear ; m-theme ;;
-09 | 9) clear ; m-system ;;
-10 | 10) clear ; clearcache ;;
-11 | 11) clear ; $ressee ;;
-12 | 12) clear ; $bottt ;;
+08 | 8) clear ; m-system ;;
+09 | 9) clear ; clearcache ;;
+10 | 10) clear ; $ressee ;;
+11 | 11) clear ; $bottt ;;
 100) clear ; $up2u ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;

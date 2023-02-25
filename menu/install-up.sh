@@ -10,15 +10,15 @@ export COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|s
 export COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"                    
 ###########- END COLOR CODE -##########
 
-echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Remove Old Script"
+echo -e " │${NC}   [INFO]${NC} Remove Old Script"
 rm /usr/bin/m-bot
 
 sleep 2
-echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
+echo -e " │${NC}   [INFO]${NC} Downloading New Script"
 wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 
 sleep 2
-echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
+echo -e " │${NC}   [INFO]${NC} Download Changelog File"
 wget -q -O /root/changelog.txt "https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/changelog.txt" && chmod +x /root/changelog.txt
-echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Read Changelog? ./root/changelog.txt"
+echo -e " │${NC}   [INFO]${NC} Read Changelog? ./root/changelog.txt"
 sleep 2

@@ -71,23 +71,22 @@ exit 0
 fi
 
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• VMESS PANEL MENU •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VMESS${NC}      ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE VMESS${NC}   $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL VMESS${NC}    ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}USER VMESS${NC}    $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW VMESS${NC}"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}               ${WH}• VMESS PANEL MENU •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ┌───────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}[ 01]${NC}  • ${WH}ADD VMESS${NC}      "
+echo -e "   ${WH}[ 02]${NC}  • ${WH}TRIAL VMESS${NC}"
+echo -e "   ${WH}[ 03]${NC}  • ${WH}RENEW VMESS${NC}"
+echo -e "   ${WH}[ 04]${NC}  • ${WH}DELETE VMESS${NC}"
+echo -e "   ${WH}[ 05]${NC}  • ${WH}USER VMESS${NC}"
+echo -e "   ${WH}[ 00]${NC}  • ${WH}GO BACK${NC}"
+echo -e "  └───────────────────────────────────────────────┘${NC}"
+echo -e " ┌──────────────────────${WH}BY────────────────────┐${NC}"
+echo -e "   ${WH}             • MasWayVPN •                  $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 01 | 1) clear ; add-vmess ;;
 02 | 2) clear ; trialvmess ;;

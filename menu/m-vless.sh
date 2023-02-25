@@ -70,21 +70,21 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               • MENU VLESS •                  ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VLESS${NC}      ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}DELETE VLESS${NC}   $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}RENEW VLESS${NC}    ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER ONLINE${NC}    $COLOR1 $NC"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
-echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}                 • MENU VLESS •                  ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ┌───────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}[ 01$]${NC}  • ${WH}ADD VLESS${NC}"
+echo -e "   ${WH}[ 02$]${NC}  • ${WH}RENEW VLESS${NC}"
+echo -e "   ${WH}[ 03$]${NC}  • ${WH}DELETE VLESS${NC}"
+echo -e "   ${WH}[ 04$]${NC}  • ${WH}USER ONLINE${NC}"
+echo -e "   ${WH}[ 00$]${NC}  • ${WH}GO BACK${NC}"
+echo -e "  └───────────────────────────────────────────────┘${NC}"
+echo -e " ┌───────────────────${WH}BY${NC}──────────────────┐"
+echo -e "  ${WH}             • MasWayVPN •${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 1) clear ; add-vless ; exit ;;
 2) clear ; trialvless ; exit ;;

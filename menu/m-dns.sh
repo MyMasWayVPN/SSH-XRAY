@@ -19,36 +19,36 @@ export INFO="[${GREEN}INFO${NC}]";
 
 function setdns(){
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}                   • USERS LOGS •                ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 read -p "   DNS : " setdnss
 
 if [ -z $setdnss ]; then
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  ${ERROR} DNS Cannot Be Empty";
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${NC}"
+echo -e "  ${NC}  ${ERROR} DNS Cannot Be Empty";
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-dns
 else
 echo "$setdnss" > /root/dns
-echo -e "$COLOR1 ${NC}  ${INFO} Copy DNS To Resolv.conf";
+echo -e "  ${NC}  ${INFO} Copy DNS To Resolv.conf";
 echo "nameserver $setdnss" > /etc/resolv.conf
 sleep 2
-echo -e "$COLOR1 ${NC}  ${INFO} Copy DNS To Resolv.conf.d/head";
+echo -e "  ${NC}  ${INFO} Copy DNS To Resolv.conf.d/head";
 echo "nameserver $setdnss" > /etc/resolvconf/resolv.conf.d/head
 sleep 2
-echo -e "$COLOR1 ${NC}  ${INFO} DNS Update Successfully";
+echo -e "  ${NC}  ${INFO} DNS Update Successfully";
 fi
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-dns
@@ -56,31 +56,31 @@ menu-dns
 
 function resdns(){
     clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}                   • USERS LOGS •                ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 read -p "    Reset Default DNS [Y/N]: " -e answer
 if [[ "$answer" = 'y' ]]; then
 dnsfile="/root/dns"
 if test -f "$dnsfile"; then
 rm /root/dns
 fi
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  ${INFO} Delete Resolv.conf DNS";
+echo -e "  ${NC}"
+echo -e "  ${NC}  ${INFO} Delete Resolv.conf DNS";
 echo "nameserver 8.8.8.8" > /etc/resolv.conf
 sleep 2
-echo -e "$COLOR1 ${NC}  ${INFO} Delete Resolv.conf.d/head DNS";
+echo -e "  ${NC}  ${INFO} Delete Resolv.conf.d/head DNS";
 echo "nameserver 8.8.8.8" > /etc/resolvconf/resolv.conf.d/head
 sleep 2
 else
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}   $INFO Operation Cancelled By User"
+echo -e "  ${NC}"
+echo -e "  ${NC}   $INFO Operation Cancelled By User"
 fi
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-dns
@@ -93,28 +93,28 @@ menu
 }
 
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 • USERS LOGS •                ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}                   • USERS LOGS •                ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 
 dnsfile="/root/dns"
 if test -f "$dnsfile"; then
 udns=$(cat /root/dns)
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}   Active DNS : $udns"
-echo -e "$COLOR1 ${NC}"
+echo -e "  ${NC}"
+echo -e "  ${NC}   Active DNS : $udns"
+echo -e "  ${NC}"
 fi
-echo -e "$COLOR1 ${NC}  ${WH}[${COLOR1}01${WH}]$NC ${COLOR1}• ${WH}CHANGE DNS       ${WH}[${COLOR1}03${WH}]$NC ${COLOR1}• ${WH}CONTENT CEK"
-echo -e "$COLOR1 ${NC}  ${WH}[${COLOR1}02${WH}]$NC ${COLOR1}• ${WH}RESET DNS        ${WH}[${COLOR1}04${WH}]$NC ${COLOR1}• ${WH}REBOOT"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  ${WH}[${COLOR1}00${WH}]$NC ${COLOR1}• ${WH}GO BACK${NC}"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${NC}  ${WH}[ 01$]$NC  • ${WH}CHANGE DNS       ${WH}[ 03$]$NC  • ${WH}CONTENT CEK"
+echo -e "  ${NC}  ${WH}[ 02$]$NC  • ${WH}RESET DNS        ${WH}[ 04$]$NC  • ${WH}REBOOT"
+echo -e "  ${NC}"
+echo -e "  ${NC}  ${WH}[ 00$]$NC  • ${WH}GO BACK${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 01 | 1) clear ; setdns ;;
 02 | 2) clear ; resdns ;;

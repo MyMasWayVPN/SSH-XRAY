@@ -14,10 +14,10 @@ USERGIT=$(cat /etc/github/username)
 
 function setapi(){
     clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• IPVPS GITHUB API •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}           • IPVPS GITHUB API •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 
 if [[ -f /etc/github/api && -f /etc/github/email && /etc/github/username ]]; then
    rec="OK"
@@ -27,11 +27,11 @@ fi
 
 read -p " E-mail   : " EMAIL1
 if [ -z $EMAIL1 ]; then
-echo -e "$COLOR1 ${NC}   [INFO] Please Input Your Github Email Adress"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}   [INFO] Please Input Your Github Email Adress"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -39,11 +39,11 @@ fi
 
 read -p " Username : " USERNAME1
 if [ -z $USERNAME1 ]; then
-echo -e "$COLOR1 ${NC}   [INFO] Please Input Your Github Username"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}   [INFO] Please Input Your Github Username"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
@@ -51,11 +51,11 @@ fi
 
 read -p " API      : " API1
 if [ -z $API1 ]; then
-echo -e "$COLOR1 ${NC}  [INFO] Please Input Your Github API"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}  [INFO] Please Input Your Github API"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 m-ip
@@ -67,19 +67,18 @@ echo "$USERNAME1" > /etc/github/username
 echo "$API1" > /etc/github/api
 echo "ON" > /etc/github/gitstat
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}   [INFO] Github Api Setup Successfully"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}   • Email : $EMAIL1"
-echo -e "$COLOR1 ${NC}   • User  : $USERNAME1"
-echo -e "$COLOR1 ${NC}   • API   : $API1"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}   [INFO] Github Api Setup Successfully"
+echo -e "  ${NC}   • Email : $EMAIL1"
+echo -e "  ${NC}   • User  : $USERNAME1"
+echo -e "  ${NC}   • API   : $API1"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                  • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -87,19 +86,19 @@ m-ip
 
 function viewapi(){
     clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• LIST REGISTER IP •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  • Email : $EMAILGIT"
-echo -e "$COLOR1 ${NC}  • User  : $USERGIT"
-echo -e "$COLOR1 ${NC}  • API   : $APIGIT"
-echo -e "$COLOR1 ${NC}  • All U need Is Create a new repository "
-echo -e "$COLOR1 ${NC}    & Nammed : permission "
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}           • LIST REGISTER IP •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  • Email : $EMAILGIT"
+echo -e "  ${NC}  • User  : $USERGIT"
+echo -e "  ${NC}  • API   : $APIGIT"
+echo -e "  ${NC}  • All U need Is Create a new repository "
+echo -e "  ${NC}    & Nammed : permission "
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -107,43 +106,43 @@ m-ip
 
 function add_ip(){
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/permission
 read -p "   NEW IPVPS : " daftar
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  [INFO] Checking the IPVPS!"
+echo -e "  ${NC}"
+echo -e "  ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
 REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
-echo -e "$COLOR1 ${NC}  [INFO] VPS IP Already Registered!!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}  [INFO] VPS IP Already Registered!!"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 else
-echo -e "$COLOR1 ${NC}  [INFO] OK! IP VPS is not Registered!"
-echo -e "$COLOR1 ${NC}  [INFO] Lets Regester it!"
+echo -e "  ${NC}  [INFO] OK! IP VPS is not Registered!"
+echo -e "  ${NC}  [INFO] Lets Regester it!"
 sleep 3
 clear
 fi
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 read -p "   User Name  : " client
 if [ -z $client ]; then
 cd
-echo -e "$COLOR1 ${NC}  [INFO] Please Input client"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}  [INFO] Please Input client"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -153,11 +152,11 @@ fi
 read -p "   EXP Date   : " exp
 if [ -z $exp ]; then
 cd
-echo -e "$COLOR1 ${NC}   [INFO] Please Input exp date"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC}   [INFO] Please Input exp date"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -169,9 +168,9 @@ satu="ON"
 dua="OFF"
 while true $x != "ok"
 do
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  ${COLOR1}[01]${NC} • ADMIN   ${COLOR1}[02]${NC} • NORMAL"
-echo -e "$COLOR1 ${NC}"
+echo -e "  ${NC}"
+echo -e "  ${NC}   [01]${NC} • ADMIN    [02]${NC} • NORMAL"
+echo -e "  ${NC}"
 echo -ne "   Input your choice : "; read list
 echo ""
 case "$list" in 
@@ -207,23 +206,23 @@ git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
 sleep 1
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  Client IP Regested Successfully"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  Client Name   : $client"
-echo -e "$COLOR1 ${NC}  Admin Panel   : $isadmin"
-echo -e "$COLOR1 ${NC}  IP VPS        : $daftar"
-echo -e "$COLOR1 ${NC}  Register Date : $hariini"
-echo -e "$COLOR1 ${NC}  Expired Date  : $exp"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  Client IP Regested Successfully"
+echo -e "  ${NC}"
+echo -e "  ${NC}  Client Name   : $client"
+echo -e "  ${NC}  Admin Panel   : $isadmin"
+echo -e "  ${NC}  IP VPS        : $daftar"
+echo -e "  ${NC}  Register Date : $hariini"
+echo -e "  ${NC}  Expired Date  : $exp"
 cd
 rm -rf /root/permission
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHINH •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
@@ -239,28 +238,28 @@ rm -rf .git &> /dev/null
 git init &> /dev/null
 touch ipmini &> /dev/null
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• DELETE IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}               • DELETE IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -rp "   Please Input Number : " nombor
 if [ -z $nombor ]; then
 cd
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}• DELETE IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}               • DELETE IPVPS •              ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${NC}   [INFO] Please Input Correct Number"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}                  • MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
@@ -284,21 +283,21 @@ git branch -M main &> /dev/null
 git remote add origin https://github.com/${USERGIT}/permission.git &> /dev/null
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git &> /dev/null
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  Client IP Deleted Successfully"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  Ip VPS       : $ivps1"
-echo -e "$COLOR1 ${NC}  Expired Date : $exp"
-echo -e "$COLOR1 ${NC}  Client Name  : $name1"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  Client IP Deleted Successfully"
+echo -e "  ${NC}"
+echo -e "  ${NC}  Ip VPS       : $ivps1"
+echo -e "  ${NC}  Expired Date : $exp"
+echo -e "  ${NC}  Client Name  : $name1"
 cd
 rm -rf /root/permission
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -306,10 +305,10 @@ m-ip
 
 function renewipvps(){
  clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/permission
 git config --global user.email "${EMAILGIT}" &> /dev/null
 git config --global user.name "${USERGIT}" &> /dev/null
@@ -323,29 +322,29 @@ echo -e "   [ ${Lyellow}INFO${NC} ] Checking list.."
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/root/permission/ipmini")
 if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
   clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}   [INFO] You have no existing clients!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}   [INFO] You have no existing clients!"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2-4 | nl -s '. '
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
   if [[ ${CLIENT_NUMBER} == '1' ]]; then
@@ -356,15 +355,15 @@ until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]];
 if [ -z $CLIENT_NUMBER ]; then
 cd
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}   [INFO] Please Input Correct Number"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}   [INFO] Please Input Correct Number"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -375,15 +374,15 @@ read -p " Expired (days): " masaaktif
 if [ -z $masaaktif ]; then
 cd
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  [INFO] Please Input Correct Number"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  [INFO] Please Input Correct Number"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
@@ -405,23 +404,23 @@ git branch -M main
 git remote add origin https://github.com/${USERGIT}/permission.git
 git push -f https://${APIGIT}@github.com/${USERGIT}/permission.git
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  Client IP VPS Renew Successfully"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1 ${NC}  Ip VPS        : $ivps1"
-echo -e "$COLOR1 ${NC}  Renew Date    : $now"
-echo -e "$COLOR1 ${NC}  Days Added    : $masaaktif Days"
-echo -e "$COLOR1 ${NC}  Expired Date  : $exp4"
-echo -e "$COLOR1 ${NC}  Client Name   : $name1"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  Client IP VPS Renew Successfully"
+echo -e "  ${NC}"
+echo -e "  ${NC}  Ip VPS        : $ivps1"
+echo -e "  ${NC}  Renew Date    : $now"
+echo -e "  ${NC}  Days Added    : $masaaktif Days"
+echo -e "  ${NC}  Expired Date  : $exp4"
+echo -e "  ${NC}  Client Name   : $name1"
 cd
 rm -rf /root/permission
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -438,15 +437,15 @@ rm -rf .git
 git init
 touch ipmini
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 grep -E "^### " "/root/permission/ipmini" | cut -d ' ' -f 2 | nl -s '. '
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 cd
 rm -rf /root/permission
 echo -e ""
@@ -460,15 +459,15 @@ rm -f /etc/github/username
 rm -f /etc/github/api
 rm -f /etc/github/gitstat
 echo "OFF" > /etc/github/gitstat
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• RESET GITUB API •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}  [INFO] Github API Reseted Successfully"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}• RESET GITUB API •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}  [INFO] Github API Reseted Successfully"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip  
@@ -476,26 +475,26 @@ m-ip
 Isadmin=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• PREMIUM USER ONLY •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} [INFO] Only PRO Users Can Use This Panel"
-echo -e "$COLOR1 ${NC} [INFO] Buy Premium Membership : "
-echo -e "$COLOR1 ${NC} [INFO] PM : https://wa.me/085754292950"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}              ${WH}• PREMIUM USER ONLY •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC} [INFO] Only PRO Users Can Use This Panel"
+echo -e "  ${NC} [INFO] Buy Premium Membership : "
+echo -e "  ${NC} [INFO] PM : https://wa.me/085754292950"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip  
 fi
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 GITREQ=/etc/github/gitstat
 if [ -f "$GITREQ" ]; then
     cekk="ok"
@@ -508,15 +507,15 @@ fi
 stst1=$(cat /etc/github/gitstat)
 if [ "$stst1" = "OFF" ]; then
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• REGISTER IPVPS •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}   • You Need To Set Github API First!"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${NC}   • You Need To Set Github API First!"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to Set API"
 setapi
@@ -536,18 +535,18 @@ else
 ISON=""
 ressee="m-ip"
 fi
-echo -e "   $COLOR1 [01]$NC • $APIOK        $COLOR1 [04]$NC • RENEW IPVPS" 
-echo -e "   $COLOR1 [02]$NC • ADD IPVPS      $COLOR1 [05]$NC • LIST IPVPS"
-echo -e "   $COLOR1 [03]$NC • DELETE IPVPS   $COLOR1 [06]$NC • $ISON"
+echo -e "     [01]$NC • $APIOK          [04]$NC • RENEW IPVPS" 
+echo -e "     [02]$NC • ADD IPVPS        [05]$NC • LIST IPVPS"
+echo -e "     [03]$NC • DELETE IPVPS     [06]$NC • $ISON"
 echo -e "   "
-echo -e "   $COLOR1 [00]$NC • GO BACK"
+echo -e "     [00]$NC • GO BACK"
 
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${WH}• MasWayVPN •   $NC"
+echo -e " └─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
-echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
+echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
 01 | 1) clear ; $rex ;;
 02 | 2) clear ; add_ip ;;

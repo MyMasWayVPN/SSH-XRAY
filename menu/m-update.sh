@@ -25,10 +25,10 @@ clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}⇱ UPDATE ⇲                    ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}                ${WH}⇱ DI MULAI ⇲                   ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}                      ⇱ UPDATE ⇲             ${NC}"
+echo -e "  ${WH}                     ⇱ DI MULAI ⇲            ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 sleep 1
 clear
 #hapus menu
@@ -272,9 +272,9 @@ chmod +x backup
 chmod +x rclone
 chmod +x ws-dropbear
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}⇱ UPDATE ⇲                    ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}⇱ SELESAI....⇲                  ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}               ⇱ UPDATE ⇲                    ${NC}"
+echo -e "  ${WH}             ⇱ SELESAI....⇲                  ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 sleep 1
 cd
