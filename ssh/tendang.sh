@@ -1,5 +1,5 @@
 #!/bin/bash
-# SCRIPT By TARAP KUHING
+# SCRIPT By MasWayVPN
 #!/bin/bash
 #!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')

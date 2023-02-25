@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mod By TARAP KUHING
+# Mod By MasWayVPN
 # ==========================================
 # Color
 RED='\033[0;31m'

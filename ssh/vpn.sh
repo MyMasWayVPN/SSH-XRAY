@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mod By TARAP KUHING
+# Mod By MasWayVPN
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -25,7 +25,7 @@ echo -e "${NC}${LIGHT}WhatsApp : 085754292950"
 echo -e "${NC}${LIGHT}Telegram : https://t.me/Hendra2012"
 exit 0
 fi
-# By TARAP KUHING
+# By MasWayVPN
 # ==================================================
 # Link Hosting Kalian
 tarapkuhing="raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/ssh"

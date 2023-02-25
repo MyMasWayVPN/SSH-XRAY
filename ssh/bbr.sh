@@ -1,5 +1,5 @@
 #!/bin/bash
-# Mod By TARAP KUHING
+# Mod By MasWayVPN
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -21,7 +21,7 @@ else
 echo -e "${NC}${RED}Permission Denied!${NC}";
 exit 0
 fi
-#Optimasi Speed By TARAP KUHING
+#Optimasi Speed By MasWayVPN
 Add_To_New_Line(){
 	if [ "$(tail -n1 $1 | wc -l)" == "0"  ];then
 		echo "" >> "$1"
