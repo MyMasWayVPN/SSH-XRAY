@@ -23,10 +23,10 @@ fi
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^###' | cut -d ' ' -f 2 | sort | uniq`);
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• VMESS USER ONLINE •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${WH}• VMESS USER ONLINE •                          ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 
 for akun in "${data[@]}"
 do
@@ -54,17 +54,17 @@ if [[ -z "$jum" ]]; then
 echo > /dev/null
 else
 jum2=$(cat /tmp/ipvmess.txt | nl)
-echo -e "$COLOR1 ${NC} user : $akun";
-echo -e "$COLOR1 ${NC} $jum2";
+echo -e "  ${NC} user : $akun";
+echo -e "  ${NC} $jum2";
 fi
 rm -rf /tmp/ipvmess.txt
 done
 
 rm -rf /tmp/other.txt
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌──────────────────── ${WH}BY─────────────────────┐${NC}"
+echo -e "  ${WH}            • MasWayVPN •                    ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-vmess

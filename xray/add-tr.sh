@@ -80,22 +80,22 @@ fi
 tls="$(cat ~/log-install.txt | grep -w "Trojan WS TLS" | cut -d: -f2|sed 's/ //g')"
 ntls="$(cat ~/log-install.txt | grep -w "Trojan WS none TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Trojan Account •             ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}          • Add Trojan Account •             ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 
 		read -rp "User: " -e user
 		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
-		echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-                echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Trojan Account •             ${NC} $COLOR1 $NC"
-                echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+		echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+                echo -e "  ${WH}     • Add Trojan Account •             ${NC}"
+                echo -e " └─────────────────────────────────────────────────┘${NC}"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
 			echo ""
-                        echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+                        echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 			read -n 1 -s -r -p "Press any key to back on menu"
 			m-trojan
 		fi
@@ -122,37 +122,32 @@ trojanlink1="trojan://${uuid}@${domain}:${tls}?mode=gun&security=tls&type=grpc&s
 trojanlink="trojan://${uuid}@${domain}:${tls}?path=%2Ftrojan-ws&security=tls&host=$sni&type=ws&sni=$sni#${user}"
 systemctl restart xray
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CREATE TROJAN USER •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Host/IP      ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Port none TLS${COLOR1}: ${WH}${ntls}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Port gRPC    ${COLOR1}: ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Key          ${COLOR1}: ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/trojan-ws" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}ServiceName  ${COLOR1}: ${WH}trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Link TLS     ${COLOR1}: ${WH}${trojanlink}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Link gRPC    ${COLOR1}: ${WH}${trojanlink1}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp"            | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}         • CREATE TROJAN USER •              ${NC}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Remarks       : ${NC}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Host/IP       : ${NC}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Wildcard      : ${NC}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Port TLS      : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Port none TLS : ${NC}${ntls}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Port gRPC     : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Key           : ${NC}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}Path          : ${NC}/trojan-ws" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}ServiceName   : ${NC}trojan-grpc" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}Link TLS      : ${NC}${trojanlink}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}Link gRPC     : ${NC}${trojanlink1}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} ${WH}Expired On    : ${NC}$exp"            | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ┌───────────────────── ${WH}BY ───────────────────┐${NC}"
+echo -e "  ${WH}              • MasWayVPN •                  ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu

@@ -73,7 +73,7 @@ clear
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Vless WS TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vless WS none TLS" | cut -d: -f2|sed 's/ //g')"
-user=♡TARAP-KUHING♡`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=MasWayVPN`</dev/urandom tr -dc X-Z0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -86,42 +86,37 @@ vlesslink2="vless://${uuid}@${domain}:80?path=/vless&security=none&encryption=no
 vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=$sni#${user}"
 systemctl restart xray
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• TRIAL VLESS •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Remarks      ${COLOR1}: ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Domain       ${COLOR1}: ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Wildcard     ${COLOR1}: ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Port TLS     ${COLOR1}: ${WH}$tls" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Port none TLS${COLOR1}: ${WH}80,8080" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}id           ${COLOR1}: ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Encryption   ${COLOR1}: ${WH}none" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Network      ${COLOR1}: ${WH}ws" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}/vless" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${WH}Path         ${COLOR1}: ${WH}vless-grpc" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} "
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Link TLS     ${COLOR1}: ${WH}${vlesslink1}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Link none TLS${COLOR1}: ${WH}${vlesslink2}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Link gRPC    ${COLOR1}: ${WH}${vlesslink3}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${WH}Expired On   ${COLOR1}: ${WH}$exp" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}"
-echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• MasWayVPN •${NC}                 $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}            • TRIAL VLESS •                  ${NC}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} "
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} Remarks       : ${WH}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Domain        : ${WH}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Wildcard      : ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Port TLS      : ${WH}$tls" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} }Port none TLS: ${WH}80,8080" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} id            : ${WH}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Encryption    : ${WH}none" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Network       : ${WH}ws" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Path          : ${WH}/vless" | tee -a /etc/log-create-user.log
+echo -e "  ${WH} Path          : ${WH}vless-grpc" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} ${WH}Link TLS      : ${WH}${vlesslink1}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} ${WH}Link none TLS : ${WH}${vlesslink2}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} ${WH}Link gRPC     : ${WH}${vlesslink3}" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH} ${WH}Expired On    : ${WH}$exp" | tee -a /etc/log-create-user.log
+echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────── ${WH}BY$ ────────────────────┐${NC}"
+echo -e "  ${WH}             • MasWayVPN •                  ${NC}"
+echo -e " └─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu

@@ -77,9 +77,9 @@ domainlama=`cat /etc/xray/domain`
 fi
 
 clear
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e "$COLBG1               • RENEW DOMAIN SSL •               $NC"
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 echo -e "[ ${green}INFO${NC} ] Start "
 sleep 0.5
@@ -109,7 +109,7 @@ systemctl restart nginx
 echo -e "[ ${green}INFO${NC} ] All finished... "
 sleep 0.5
 echo ""
-echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
+echo -e " ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
