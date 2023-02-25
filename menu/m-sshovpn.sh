@@ -1,5 +1,4 @@
-#!/bin/bash
-GNU nano 7.2                                         /sdcard/Download/SSH-XRAY/menu/m-sshovpnori.sh
+#!/bin/bash                                         /sdcard/Download/SSH-XRAY/menu/m-sshovpnori.sh
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 colornow=$(cat /etc/tarap/theme/color.conf)
