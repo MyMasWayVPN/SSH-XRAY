@@ -2,11 +2,9 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+BR='\e[1;36m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -70,20 +68,20 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-echo -e "  ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}            • TERIMA KASIH SUDAH •            ${NC}"
 echo -e "  ${WH}            • MENGGUNAKAN SCRIPT •            ${NC}"
 echo -e "  ${WH}            • PREMIUM DARI SAYA  •            ${NC}"
 echo -e "  ${WH}            • KALAU ADA KENDALA  •            ${NC}"
 echo -e "  ${WH}            • CHAT SAYA LEWAT WA •            ${NC}"
 echo -e "  ${WH}         • https:/wa.me/083120857907 •        ${NC}"
-echo -e "  └─────────────────────────────────────────────────┘${NC}"
-echo -e "  ┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${BR}┌─────────────────────────────────────────────────┐${NC}"
 read -rp "  New Host/domain : " -e dns
 echo ""
 if [ -z $dns ]; then
 echo -e "  [INFO] Type Your Domain/sub domain"
-echo -e "  └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${BR}└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 menu
@@ -92,7 +90,7 @@ echo "IP=$dns" > /var/lib/ipvps.conf
 echo ""
 echo "  [INFO] Dont forget to renew cert"
 echo ""
-echo -e "  └─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${BR}└─────────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "  Press any key to Renew Cret"
 certv2ray

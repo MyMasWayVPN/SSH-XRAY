@@ -2,11 +2,9 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+BR='\e[1;36m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -72,12 +70,12 @@ fi
 
 clear
                hariini=`date +%d-%m-%Y`
-               echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+               echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
                echo -e "  ${WH}            • Auto Delete •                  ${NC}"
-               echo -e " └─────────────────────────────────────────────────┘${NC}"
-               echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+               echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+               echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
                echo "          Thank you for removing the EXPIRED USERS"
-               echo -e " └─────────────────────────────────────────────────┘${NC}"
+               echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
                cat /etc/shadow | cut -d: -f1,8 | sed /:$/d > /tmp/expirelist.txt
                totalaccounts=`cat /tmp/expirelist.txt | wc -l`
                for((i=1; i<=$totalaccounts; i++ ))
@@ -109,9 +107,10 @@ clear
                fi
                done
                echo " "
-               echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+               echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
                echo -e "  ${WH}     • SCRIPT by MasWayVPN •              ${NC}"
-               echo -e " └─────────────────────────────────────────────────┘${NC}"
+               echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 
                read -n 1 -s -r -p "Press any key to back on menu"
                menu
+

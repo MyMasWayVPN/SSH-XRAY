@@ -18,13 +18,13 @@ mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 echo "$SUB_DOMAIN" >> /etc/v2ray/domain
 #
-DOMAIN=kuhing.my.id
+DOMAIN=indossh.ninja
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-SUB_DOMAIN=${sub}.kuhing.my.id
-NS_DOMAIN=${sub}.kuhing.my.id
-CF_ID=merahjambo@gmail.com
-CF_KEY=86431de017f7bf317c3960061da2f87c8effb
+SUB_DOMAIN=${sub}.indossh.ninja
+NS_DOMAIN=${sub}.indossh.ninja
+CF_ID=akunabal.abal7770@gmail.com
+CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."

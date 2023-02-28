@@ -1,4 +1,9 @@
 #!/bin/bash
+NC="\e[0m"
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
@@ -20,28 +25,30 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
-echo -e "${tyblue}|           ♡ PORT SERVER VPS AKTIF                |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
-echo -e "${tyblue}|●⏩ Open VPN                : 2086 ⏪             |${NC}"
-echo -e "${tyblue}|●⏩ SSH SSL Websocket       : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ SSH Websocket           : [ all port ] ⏪     |${NC}"
-echo -e "${tyblue}|●⏩ Stunnel                 : 8443,8880 ⏪        |${NC}"
-echo -e "${tyblue}|●⏩ Vmess WS TLS            : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Vless WS TLS            : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Trojan WS TLS           : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Shadowsocks WS TLS      : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Vmess gRPC              : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Vless gRPC              : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Trojan gRPC             : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Shadowsocks gRPC        : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ Vmess WS none TLS       : 80 ⏪               |${NC}"
-echo -e "${tyblue}|●⏩ Vless WS none TLS       : 80 ⏪               |${NC}"
-echo -e "${tyblue}|●⏩ Trojan WS none TLS      : 80 ⏪               |${NC}"
-echo -e "${tyblue}|●⏩ Shadowsocks WS none TLS : 80 ⏪               |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
-echo -e "${tyblue}|            ♡ SCRIPT BY MasWayVPN              |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
+echo -e "${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${BR}|${NC}${RED}           ♡ PORT SERVER VPS AKTIF               ${NC}${BR}|${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e "${BR}  ┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Open VPN              :${NC}${IJO} 2086 ⏪          ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ SSH SSL Websocket     :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ SSH Websocket         :${NC}${IJO} [ all port ] ⏪  ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Stunnel               :${NC}${IJO} 8443,8880 ⏪     ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vmess WS TLS          :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vless WS TLS          :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Trojan WS TLS         :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ SS WS TLS             :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vmess gRPC            :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vless gRPC            :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Trojan gRPC           :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Shadowsocks gRPC      :${NC}${IJO} 443 ⏪           ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vmess WS none TLS     :${NC}${IJO} 80 ⏪            ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Vless WS none TLS     :${NC}${IJO} 80 ⏪            ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ Trojan WS none TLS    :${NC}${IJO} 80 ⏪            ${NC}${BR}|${NC}"
+echo -e "  ${BR}|${NC}${UNG}●⏩ SS WS none TLS        :${NC}${IJO} 80 ⏪            ${NC}${BR}|${NC}"
+echo -e "${BR}  └─────────────────────────────────────────────┘${NC}"
+echo -e "${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${BR}|${NC}${RED}            ♡ SCRIPT BY MasWayVPN                ${NC}${BR}|${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 read -p " Select menu : " opt
 echo -e ""

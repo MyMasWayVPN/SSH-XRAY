@@ -2,13 +2,13 @@
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 
-DOMAIN=kuhing.my.id
+DOMAIN=indossh.ninja
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 #subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.kuhing.my.id
-#NS_dns=${subsl}.kuhing.my.id
-CF_ID=merahjambo@gmail.com
-CF_KEY=86431de017f7bf317c3960061da2f87c8effb
+dns=${sub}.indossh.ninja
+#NS_dns=${subsl}.indossh.ninja
+CF_ID=akunabal.abal7770@gmail.com
+CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${dns}..."

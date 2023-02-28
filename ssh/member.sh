@@ -2,11 +2,9 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+BR='\e[1;36m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -71,12 +69,12 @@ exit 0
 fi
 
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}            • MEMBER SSH •                   ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo "USERNAME          EXP DATE          STATUS"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 while read expired
 do
 AKUN="$(echo $expired | cut -d: -f1)"
@@ -92,9 +90,9 @@ fi
 fi
 done < /etc/passwd
 JUMLAH="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo "Account number: $JUMLAH user"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 read -n 1 -s -r -p "Press any key to back on menu"
 
 menu
