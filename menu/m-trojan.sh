@@ -1,3 +1,213 @@
-z="
-";sGz='M}└─';HIz=' 2) ';KFz='IZIN';ADz=' +%s';GCz='wkwk';Rz='1 | ';hGz='C}"';hCz='exp=';pDz='ipv4';NHz='4 ]$';XDz='f /e';JFz='ON (';nDz='url ';mz='at /';GBz='$(ca';SEz=' '\''{p';WGz='elif';BGz='\\03';SGz='firs';mGz='ENU ';SDz=' /et';JCz='ot/t';AGz='${*}';jHz='   •';sDz='ip.c';VIz=' 5) ';fIz='AH T';IHz='ROJA';yBz='WayV';UEz=' $2}';hFz='32m'\''';EHz='JAN$';vCz='+%s`';nBz=' {';jIz='p 1 ';mEz='" ];';GFz='..."';DBz='31m"';Mz='ps:/';CHz='}ADD';gDz='fi';aFz='red=';MCz='=( `';EEz='m/My';WEz='me >';yFz='1;1m';oBz='curl';WCz='prin';iCz='( `g';Uz='e | ';nz='etc/';QFz='P)';TGz='t !"';iFz='NC='\''';tFz='red(';xHz=' $op';kCz='^###';DGz='"; }';iBz='\033';UIz='05 |';WHz='LINE';lCz=' $us';aGz=' -ne';tDz='om)';PHz='ETE ';QBz='" | ';GDz='2) /';WDz='rm -';wDz='s://';SCz='"^##';EBz='COLO';YCz='}'\''` ';tCz=' "$e';PIz='w-tr';uEz='ekTw';kFz='{ ec';VGz=' 0';EIz='tr ;';NDz='" ]]';CBz='3[0;';yCz='iji"';LCz='data';sz='nf)';GIz='02 |';OGz=' nee';cDz='/dev';CIz='r ; ';qHz='ct m';wHz='case';AHz='1 ]$';WIz='cek-';lHz='PN•$';oGz='L TR';NCz='cat ';nFz='[32;';OCz='/roo';EDz=' (d1';Hz='nsec';NBz='rep ';vz='6m"';FHz='2 ]$';Dz='er=$';pEz='CekT';IDz='00 )';bFz=''\''\e[';DDz='=$((';iGz='"${W';JGz='then';nHz=' " $';bGz='clea';iDz='f /r';qz='eme/';TEz='rint';uDz='Name';Oz='gle.';xBz='yMas';MDz='e "0';YHz='}"';UDz='.ini';GHz='}TRI';sEz='ekOn';HDz=' 864';ZGz='" = ';MFz=''\''{pr';THz='5 ]$';xEz='"Exp';YGz='$res';Jz='--si';vGz='{NC}';FGz='/hom';XBz='COLB';KBz='/the';Kz='lent';gBz='g'\'')"';wBz='om/M';AIz='01 |';yGz='}[ 0';xFz='33[3';Xz='s/< ';KDz='[ "$';eEz='ne=$';cEz='ni';XCz='t $2';HEz='N/My';Ez='(cur';OFz='$4}'\''';cIz='*) e';BFz='"Per';uFz=') { ';dFz='m'\''';DIz='add-';gCz='do';hIz='" ; ';LDz='" -l';FEz='MasW';tBz='serc';eFz='gree';kDz='tmp';iEz='an (';Wz='-e '\''';HBz='t /e';ZFz='Q';Vz='sed ';Qz=' 2>&';BIz=' 1) ';Az='date';lz='=$(c';HGz='edup';ZIz='menu';tHz='"; r';vHz='opt';wGz='"   ';aCz='for ';hHz='GM}─';lEz='"/et';wCz='d2=(';RIz='04 |';yHz='t in';dIz='cho ';DHz=' TRO';XGz=' [ "';ZEz='cal/';gFz='e[1;';PGz='d to';sFz=' }';WBz=')"';pFz='*}\\';Bz='From';oEz='n';bCz='user';ODz='; th';RFz=' "$M';Pz='com/';kIz='; m-';MIz='03 |';QDz='echo';SHz='NC}"';aIz='x) e';rCz='`dat';xDz='raw.';cHz='──┘$';UFz='$IZI';qCz='d1=(';JEz='thub';YBz='G1="';QHz='TROJ';mHz='""';LHz='}REN';oCz='mp" ';iz='er"`';cFz='1;31';uCz='xp" ';NFz='int ';mIz='an ;';cBz=': -f';VDz='else';uBz='onte';fEz='(cat';JBz='arap';OIz='rene';JDz='if [';uHz='ead ';ZHz='0 ]$';iIz='slee';mBz='Q ()';eHz='C}${';AFz='"';kBz='7m'\''';KGz='red ';FBz='R1="';rGz=' ${N';DCz='b.io';OEz='k | ';Fz='l -v';QGz=' upd';kEz=' -f ';dGz='"${G';tEz='e" =';uz='\e[3';CCz='ithu';qEz='wo=$';QEz='IP |';EFz='Acce';Sz='grep';pGz='OJAN';LEz='main';RBz='cut ';Gz=' --i';fFz='n='\''\';qBz='/raw';tGz='┘${N';nEz=' the';PFz='$MYI';UGz='exit';eCz='ata[';IEz='N.gi';mDz='MYIP';vFz=' -e ';TDz='c/.$';YEz='r/lo';fHz='WH}B';LBz='me/$';gHz='Y${N';fDz='&1';IGz=' ]; ';dHz='─${N';HCz='wk >';mCz='er" ';Lz=' htt';eBz='d '\''s';ICz=' /ro';bEz='me.i';pBz=' -sS';YFz='ed!"';KIz='jan ';ACz='PN/M';hEz='Blom';jCz='-E "';ABz='RED=';MGz='r sc';hDz='done';Tz=' Dat';SIz=' 4) ';eIz='"SAL';oDz='-sS ';CGz='3[0m';fGz='────';lDz='}';VFz='N" ]';KEz='.io/';GEz='ayVP';XEz=' /us';wFz='"\\0';nCz='"/ro';yz='m"';bHz='BACK';PDz='en';GGz='e/ne';gIz='EKAN';yEz='ired';dEz='CekO';TBz='-f2|';ECz='/mai';bIz='xit ';bBz='t -d';UBz=''\''s/ ';aDz='r.in';MHz='EW T';eGz='M}┌─';LGz='"You';Nz='/goo';lIz='troj';TIz='del-';AEz='ubus';Zz=': //';VEz=' $Na';bDz='i > ';kGz='    ';vBz='nt.c';Iz='ure ';kz='rnow';TCz='# " ';YDz='tc/.';lGz=' • M';WFz='an';nGz='PANE';ZCz=')';sCz='e -d';LIz=';;';oFz='1m${';YIz=' 0) ';bz='biji';PBz='TEXT';OHz='}DEL';aHz='}GO ';RDz='er >';dCz='"${d';FDz=' - d';eDz='l 2>';cz='=`da';uGz='──┐$';xCz=' "$b';CDz='exp2';dz='te +';VBz='//g'\''';MEz='/wkw';dBz='2|se';FFz='pted';fCz='@]}"';Cz='Serv';rz='r.co';kHz=' Mas';RHz='AN${';FIz=';';hBz='WH='\''';dDz='/nul';rEz=' "$C';UCz='| aw';BBz='"\03';ez='"%Y-';fz='%m-%';vDz='http';oHz='{WH}';gz='d" -';fBz='/ //';NEz='kwkw';NIz=' 3) ';sHz=' : $';wz='NC="';cGz='r';iHz='───┐';jz='colo';RGz='ate ';gGz='┐${N';jEz=') {';cCz=' in ';LFz='awk ';VCz='k '\''{';JHz='N${N';IFz='ISSI';xGz='${WH';rFz='0m";';XIz='00 |';BEz='erco';QCz='p | ';FCz='n/wk';pHz='Sele';pCz='t $3';vEz='o" ]';mFz='e "\';IBz='tc/t';qGz=' •  ';TFz=' = "';EGz='ON';rBz='.git';ZBz='BG" ';qDz='.ica';aBz='| cu';jGz='H}  ';oz='tara';KCz='mp';wEz='res=';QIz=' ;;';CFz='miss';jFz='n() ';SBz='-d: ';gEz='ni)';rHz='enu ';ZDz='$use';Yz='Date';yDz='gith';UHz='}USE';jBz='[1;3';NGz='ript';pz='p/th';XFz='Deni';DFz='ion ';REz=' awk';RCz=' -E ';HHz='AL T';tz='GM="';xz='\e[0';XHz='${NC';jDz='oot/';CEz='nten';lFz='ho -';SFz='YIP"';JIz='ltro';MBz=' | g';qFz='033[';lBz='BURI';PEz=' $MY';VHz='R ON';rDz='nhaz';OBz='-w "';KHz='3 ]$';PCz='t/tm';aEz='.$Na';DEz='t.co';hz='d "$';sBz='hubu';BHz='  • ';az=''\'')';HFz='PERM';IIz='tria';BCz='PN.g';nIz='esac';BDz='`)';
-eval "$Az$Bz$Cz$Dz$Ez$Fz$Gz$Hz$Iz$Jz$Kz$Lz$Mz$Nz$Oz$Pz$Qz$Rz$Sz$Tz$Uz$Vz$Wz$Xz$Yz$Zz$az$z$bz$cz$dz$ez$fz$gz$hz$Az$Bz$Cz$iz$z$jz$kz$lz$mz$nz$oz$pz$qz$jz$rz$sz$z$tz$uz$vz$z$wz$xz$yz$z$ABz$BBz$CBz$DBz$z$EBz$FBz$GBz$HBz$IBz$JBz$KBz$LBz$jz$kz$MBz$NBz$OBz$PBz$QBz$RBz$SBz$TBz$Vz$UBz$VBz$WBz$z$XBz$YBz$GBz$HBz$IBz$JBz$KBz$LBz$jz$kz$MBz$NBz$OBz$ZBz$aBz$bBz$cBz$dBz$eBz$fBz$gBz$z$hBz$iBz$jBz$kBz$z$lBz$mBz$nBz$z$oBz$pBz$Lz$Mz$qBz$rBz$sBz$tBz$uBz$vBz$wBz$xBz$yBz$ACz$xBz$yBz$BCz$CCz$DCz$ECz$FCz$GCz$HCz$ICz$JCz$KCz$z$LCz$MCz$NCz$OCz$PCz$QCz$Sz$RCz$SCz$TCz$UCz$VCz$WCz$XCz$YCz$ZCz$z$aCz$bCz$cCz$dCz$eCz$fCz$z$gCz$z$hCz$iCz$NBz$jCz$kCz$lCz$mCz$nCz$JCz$oCz$UCz$VCz$WCz$pCz$YCz$ZCz$z$qCz$rCz$sCz$tCz$uCz$vCz$ZCz$z$wCz$rCz$sCz$xCz$yCz$ADz$BDz$z$CDz$DDz$EDz$FDz$GDz$HDz$IDz$ZCz$z$JDz$KDz$CDz$LDz$MDz$NDz$ODz$PDz$z$QDz$lCz$RDz$SDz$TDz$bCz$UDz$z$VDz$z$WDz$XDz$YDz$ZDz$aDz$bDz$cDz$dDz$eDz$fDz$z$gDz$z$hDz$z$WDz$iDz$jDz$kDz$z$lDz$z$mDz$lz$nDz$oDz$pDz$qDz$rDz$sDz$tDz$z$uDz$lz$nDz$oDz$vDz$wDz$xDz$yDz$AEz$BEz$CEz$DEz$EEz$FEz$GEz$HEz$FEz$GEz$IEz$JEz$KEz$LEz$MEz$NEz$OEz$Sz$PEz$QEz$REz$SEz$TEz$UEz$az$z$QDz$VEz$WEz$XEz$YEz$ZEz$nz$aEz$bEz$cEz$z$dEz$eEz$fEz$XEz$YEz$ZEz$nz$aEz$bEz$gEz$z$hEz$iEz$jEz$z$JDz$kEz$lEz$TDz$uDz$UDz$mEz$nEz$oEz$z$pEz$qEz$fEz$SDz$TDz$uDz$UDz$ZCz$z$JDz$rEz$sEz$tEz$rEz$uEz$vEz$ODz$PDz$z$wEz$xEz$yEz$AFz$z$gDz$z$VDz$z$wEz$BFz$CFz$DFz$EFz$FFz$GFz$z$gDz$z$lDz$z$HFz$IFz$JFz$jEz$z$mDz$lz$nDz$oDz$pDz$qDz$rDz$sDz$tDz$z$KFz$lz$nDz$oDz$vDz$wDz$xDz$yDz$AEz$BEz$CEz$DEz$EEz$FEz$GEz$HEz$FEz$GEz$IEz$JEz$KEz$LEz$MEz$NEz$OEz$LFz$MFz$NFz$OFz$MBz$NBz$PFz$QFz$z$JDz$RFz$SFz$TFz$UFz$VFz$ODz$PDz$z$hEz$WFz$z$VDz$z$wEz$BFz$CFz$DFz$XFz$YFz$z$gDz$z$lBz$ZFz$z$lDz$z$aFz$bFz$cFz$dFz$z$eFz$fFz$gFz$hFz$z$iFz$xz$dFz$z$eFz$jFz$kFz$lFz$mFz$iBz$nFz$oFz$pFz$qFz$rFz$sFz$z$tFz$uFz$QDz$vFz$wFz$xFz$yFz$AGz$BGz$CGz$DGz$z$HFz$IFz$EGz$z$JDz$kEz$FGz$GGz$HGz$Az$IGz$JGz$z$KGz$LGz$MGz$NGz$OGz$PGz$QGz$RGz$SGz$TGz$z$UGz$VGz$z$WGz$XGz$YGz$ZGz$BFz$CFz$DFz$EFz$FFz$GFz$IGz$JGz$z$QDz$aGz$z$VDz$z$KGz$BFz$CFz$DFz$XFz$YFz$z$UGz$VGz$z$gDz$z$bGz$cGz$z$QDz$vFz$dGz$eGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$gGz$hGz$z$QDz$vFz$iGz$jGz$kGz$kGz$kGz$lGz$mGz$nGz$oGz$pGz$qGz$kGz$kGz$kGz$rGz$hGz$z$QDz$vFz$dGz$sGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$tGz$hGz$z$QDz$vFz$dGz$eGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$uGz$vGz$AFz$z$QDz$vFz$wGz$xGz$yGz$AHz$vGz$BHz$xGz$CHz$DHz$EHz$vGz$AFz$z$QDz$vFz$wGz$xGz$yGz$FHz$vGz$BHz$xGz$GHz$HHz$IHz$JHz$hGz$z$QDz$vFz$wGz$xGz$yGz$KHz$vGz$BHz$xGz$LHz$MHz$IHz$JHz$hGz$z$QDz$vFz$wGz$xGz$yGz$NHz$vGz$BHz$xGz$OHz$PHz$QHz$RHz$SHz$z$QDz$vFz$wGz$xGz$yGz$THz$vGz$BHz$xGz$UHz$VHz$WHz$XHz$YHz$z$QDz$vFz$wGz$xGz$yGz$ZHz$vGz$BHz$xGz$aHz$bHz$XHz$YHz$z$QDz$vFz$dGz$sGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$cHz$vGz$AFz$z$QDz$vFz$dGz$eGz$fGz$fGz$fGz$fGz$fGz$dHz$eHz$fHz$gHz$eHz$hHz$fGz$fGz$fGz$fGz$iHz$XHz$YHz$z$QDz$vFz$iGz$jGz$kGz$kGz$kGz$kGz$jHz$kHz$yBz$lHz$vGz$AFz$z$QDz$vFz$dGz$sGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$fGz$tGz$hGz$z$QDz$vFz$mHz$z$QDz$aGz$nHz$oHz$pHz$qHz$rHz$sHz$vGz$tHz$uHz$vHz$z$wHz$xHz$yHz$z$AIz$BIz$bGz$CIz$DIz$EIz$FIz$z$GIz$HIz$bGz$CIz$IIz$JIz$KIz$LIz$z$MIz$NIz$bGz$CIz$OIz$PIz$QIz$z$RIz$SIz$bGz$CIz$TIz$EIz$FIz$z$UIz$VIz$bGz$CIz$WIz$EIz$FIz$z$XIz$YIz$bGz$CIz$ZIz$QIz$z$aIz$bIz$LIz$z$cIz$dIz$eIz$fIz$gIz$hIz$iIz$jIz$kIz$lIz$mIz$FIz$z$nIz"
+#!/bin/bSash
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+NC="\e[0m"
+RED="\033[0;31m"
+WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
+WH='\033[1;37m'
+BURIQ () {
+curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk > /root/tmp
+data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
+for user in "${data[@]}"
+do
+exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
+d1=(`date -d "$exp" +%s`)
+d2=(`date -d "$biji" +%s`)
+exp2=$(( (d1 - d2) / 86400 ))
+if [[ "$exp2" -le "0" ]]; then
+echo $user > /etc/.$user.ini
+else
+rm -f /etc/.$user.ini > /dev/null 2>&1
+fi
+done
+rm -f /root/tmp
+}
+MYIP=$(curl -sS ipv4.icanhazip.com)
+Name=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | grep $MYIP | awk '{print $2}')
+echo $Name > /usr/local/etc/.$Name.ini
+CekOne=$(cat /usr/local/etc/.$Name.ini)
+Bloman () {
+if [ -f "/etc/.$Name.ini" ]; then
+CekTwo=$(cat /etc/.$Name.ini)
+if [ "$CekOne" = "$CekTwo" ]; then
+res="Expired"
+fi
+else
+res="Permission Accepted..."
+fi
+}
+PERMISSION () {
+MYIP=$(curl -sS ipv4.icanhazip.com)
+IZIN=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | awk '{print $4}' | grep $MYIP)
+if [ "$MYIP" = "$MYIP" ]; then
+Bloman
+else
+res="Permission Denied!"
+fi
+BURIQ
+}
+red='\e[1;31m'
+green='\e[1;32m'
+NC='\e[0m'
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+PERMISSION
+if [ -f /home/needupdate ]; then
+red "Your script need to update first !"
+exit 0
+elif [ "$res" = "Permission Accepted..." ]; then
+echo -ne
+else
+red "Permission Denied!"
+exit 0
+fi
+clear
+# // SSH Websocket Proxy
+ssh_ws=$( systemctl status ws-stunnel | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $ssh_ws == "running" ]]; then
+    status_ws=" ON${NC}"
+else
+    status_ws="${RED}OFF${NC}"
+fi
+
+# // nginx
+nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $nginx == "running" ]]; then
+    status_nginx=" ON${NC}"
+else
+    status_nginx="${RED}OFF${NC}"
+fi
+
+# // SSH Websocket Proxy
+xray=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $xray == "running" ]]; then
+    status_xray=" ON${NC}"
+else
+    status_xray="${RED}OFF${NC}"
+fi
+# TOTAL ACC CREATE VMESS WS
+vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/config.json")
+# TOTAL ACC CREATE  VLESS WS
+vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
+# TOTAL ACC CREATE  TROJAN
+trtls=$(grep -c -E "^#trojan " "/usr/local/etc/xray/trojan.json")
+# TOTAL ACC CREATE OVPN SSH
+total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+function updatews(){
+clear
+
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}           • UPDATE SCRIPT VPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}   [INFO]${NC} Check for Script updates"
+sleep 2
+wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/install-up.sh" && chmod +x /root/install_up.sh
+sleep 2
+./install_up.sh
+sleep 5
+rm /root/install_up.sh
+rm /opt/.ver
+version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/versi )
+echo "$version_up" > /opt/.ver
+echo -e "  ${IJO}   [INFO]${NC} Successfully Up To Date!"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}              • MasWayVPN •${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}"
+echo ""
+read -n 1 -s -r -p "  Press any key to back on menu"
+menu
+}
+clear
+uphours=`uptime -p | awk '{print $2,$3}' | cut -d , -f1`
+upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
+uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
+cekup=`uptime -p | grep -ow "day"`
+IPVPS=$(curl -s ipinfo.io/ip )
+serverV=$( curl -sS https://raw.githubusercontent.com/MyMasWayVPN/SSH-XRAY/main/menu/versi )
+if [ "$Isadmin" = "ON" ]; then
+uis=" Premium User$NC"
+else
+uis=" Premium Version$NC"
+fi
+if [ "$Isadmin" = "ON" ]; then
+ressee="m-ip"
+bottt="m-bot"
+else
+ressee="menu"
+bottt="menu"
+fi
+myver="$(cat /opt/.ver)"
+if [[ $serverV > $myver ]]; then
+up2u="updatews"
+else
+up2u="menu"
+fi
+
+DATE=$(date +'%Y-%m-%d')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo -e "  $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
+}
+mai="datediff "$Exp" "$DATE""
+
+today=`date -d "0 days" +"%Y-%m-%d"`
+
+# CERTIFICATE STATUS
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$today" +%s)
+certificate=$(( (d1 - d2) / 86400 ))
+clear
+
+
+echo -e "${BR}┌─────────────────────────────────────────────────┐"
+echo -e "${BR}│  ${NC}                  PANEL TROJAN                 ${BR}│${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘"
+echo -e "${BR}┌─────────────────────────────────────────────────┐"
+echo -e "${BR}│${NC}  ${UNG}IP${NC}     : ${IJO}$IPVPS${NC}"
+echo -e "${BR}│${NC}  ${UNG}DOMAIN${NC} : ${IJO}$(cat /etc/xray/domain)${NC}"
+echo -e "${BR}│${NC}  ${UNG}UPTIME${NC} : ${IJO}$uphours $upminutes $uptimecek${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘"
+echo -e "${BR}┌─────────────────────────────────────────────────┐"
+echo -e "${BR}│${NC} ${UNG}XRAY${NC} : ${status_xray} ${BR}│${NC} ${UNG}SSH-WS${NC} : ${status_ws} ${BR}│${NC} ${UNG}NGINX${NC} : ${status_xray} ${BR}│${NC}  ${IJO}GOOD${NC} ${BR}│${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘"
+echo -e "${BR}     ┌───────────────────────────────────────┐${NC}"
+echo -e "${IJO}                   LIST ACCOUNTS${NC}"
+echo -e "${BR}       —————————————————————————————————————${NC}"
+echo -e "${UNG}          SSH/OPENVPN${NC}    : ${IJO}$total_ssh${NC} "
+echo -e "${UNG}          VMESS${NC}          : ${IJO}$vmess${NC}"
+echo -e "${UNG}          VLESS${NC}          : ${IJO}$vless${NC}"
+echo -e "${UNG}          TROJAN${NC}         : ${IJO}$trtls${NC}"
+echo -e "${BR}     └───────────────────────────────────────┘${NC}"
+echo -e "${BR}   ┌───────────────────────────────────────────┐${NC}"
+echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver) Latest Version${NC}"
+echo -e "${BR}   │${NC}  ${UNG}Client Name${NC} : ${IJO}$Name${NC}"
+echo -e "${BR}   │${NC}  ${UNG}Expiry In${NC}   : ${IJO}$certificate days${NC}"
+echo -e "${BR}   └───────────────────────────────────────────┘${NC}"
+echo -e "${RED} —————————————————————————————————————————————————${NC}"
+echo -e "${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "${IJO}   1.)${NC}☞${UNG}ADD TROJAN${NC} "
+echo -e "${BR}│${NC} ${IJO} 2.)${NC}☞${UNG}TRIAL TROJAN${NC}"
+echo -e "${IJO}   3.)${NC}☞${UNG}TRIAL TROJAN${NC}"
+echo -e "${BR}│ ${NC} ${IJO}4.)${NC}☞${UNG}RENEW TROJAN${NC}"
+echo -e "${IJO}   5.)${NC}☞${UNG}USER TROJAN${NC}"
+echo -e "${BR}│${NC}  ${IJO}00.)${NC}☞${UNG}GO BACK${NC}"
+echo -e "${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e "${RED}—————————————————————————————————————————————————${NC}"
+echo -ne " ${WH}Select menu  : ${NC}"; read opt
+case $opt in
+01 | 1) clear ; add-tr ;;
+02 | 2) clear ; trialtrojan ;;
+03 | 3) clear ; renew-tr ;;
+04 | 4) clear ; del-tr ;;
+05 | 5) clear ; cek-tr ;;
+00 | 0) clear ; menu ;;
+x) exit ;;
+*) echo "SALAH TEKAN" ; sleep 1 ; m-trojan ;;
+esac
