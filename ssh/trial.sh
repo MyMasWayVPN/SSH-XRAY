@@ -112,26 +112,26 @@ echo -e "  ${GM} ┌────────────────────
 echo -e "  ${WH}             • SSH Trial Account •           ${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Username    : ${NC}$Login"  | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Password    : ${NC}$Pass" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Expired On  : ${NC}$exp"  | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Username    : ${NC}$Login"  | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Password    : ${NC}$Pass" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Expired On  : ${NC}$exp"  | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}IP          : ${NC}$IP" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Host        : ${NC}$domen" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OpenSSH     : ${NC}$opensh" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Dropbear    : ${NC}$db" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSH-WS      : ${NC}80,8080" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSH-SSL-WS  : ${NC}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSL/TLS     : ${NC}8443,8880" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Ovpn Ws     : ${NC}2086" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port TCP    : ${NC}$ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port UDP    : ${NC}$ovpn2" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port SSL    : ${NC}990" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN TCP    : ${NC}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN UDP    : ${NC}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN SSL    : ${NC}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}UDPGW       : ${NC}7100-7900" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   IP          : ${NC}$IP" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Host        : ${NC}$domen" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OpenSSH     : ${NC}$opensh" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Dropbear    : ${NC}$db" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSH-WS      : ${NC}80,8080" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSH-SSL-WS  : ${NC}$wsssl" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSL/TLS     : ${NC}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Ovpn Ws     : ${NC}2086" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port TCP    : ${NC}$ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port UDP    : ${NC}$ovpn2" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port SSL    : ${NC}990" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN TCP    : ${NC}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN UDP    : ${NC}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN SSL    : ${NC}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   UDPGW       : ${NC}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "  $NC  ${WH}HOST SLWDNS : ${WH}$sldomain"  | tee -a /etc/log-create-user.log
@@ -140,11 +140,11 @@ echo -e "  ${GM} └────────────────────
 #echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}           Payload WS                   ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌────────────────────${WH}BY──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}             • MasWayVPN •                   ${NC}" | tee -a /etc/log-create-user.log
@@ -155,26 +155,26 @@ echo -e "  ${GM} ┌────────────────────
 echo -e "  ${WH}           • SSH Trial Account •             ${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Username    : ${NC}$Login"  | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Password    : ${NC}$Pass" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Expired On  : ${NC}$exp"  | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Username    : ${NC}$Login"  | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Password    : ${NC}$Pass" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Expired On  : ${NC}$exp"  | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}IP          : ${NC}$IP" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Host        : ${NC}$domen" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OpenSSH     : ${NC}$opensh" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Dropbear    : ${NC}$db" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSH-WS      : ${NC}80,8080" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSH-SSL-WS  : ${NC}$wsssl" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}SSL/TLS     : ${NC}8443,8880" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Ovpn Ws     : ${NC}2086" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port TCP    : ${NC}$ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port UDP    : ${NC}$ovpn2" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Port SSL    : ${NC}990" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN TCP    : ${NC}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN UDP    : ${NC}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}OVPN SSL    : ${NC}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}UDPGW       : ${NC}7100-7900" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   IP          : ${NC}$IP" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Host        : ${NC}$domen" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OpenSSH     : ${NC}$opensh" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Dropbear    : ${NC}$db" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSH-WS      : ${NC}80,8080" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSH-SSL-WS  : ${NC}$wsssl" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   SSL/TLS     : ${NC}8443,8880" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Ovpn Ws     : ${NC}2086" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port TCP    : ${NC}$ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port UDP    : ${NC}$ovpn2" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   Port SSL    : ${NC}990" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN TCP    : ${NC}http://$IP:89/tcp.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN UDP    : ${NC}http://$IP:89/udp.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   OVPN SSL    : ${NC}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   UDPGW       : ${NC}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 #echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "  $NC  ${WH}HOST SLWDNS : ${WH}$sldomain"  | tee -a /etc/log-create-user.log
@@ -183,11 +183,11 @@ echo -e "  ${GM} └────────────────────
 #echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}           Payload WS                   ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}   GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${GM} ┌────────────────────${WH}BY──────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}             • MasWayVPN •                   ${NC}" | tee -a /etc/log-create-user.log
