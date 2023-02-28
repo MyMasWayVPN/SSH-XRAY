@@ -1,11 +1,12 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipinfo.io/ip);
 
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 
 APIGIT=$(cat /etc/github/api)
 EMAILGIT=$(cat /etc/github/email)
@@ -14,10 +15,10 @@ USERGIT=$(cat /etc/github/username)
 
 function setapi(){
     clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}           • IPVPS GITHUB API •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}           • IPVPS GITHUB API •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 
 if [[ -f /etc/github/api && -f /etc/github/email && /etc/github/username ]]; then
    rec="OK"
@@ -27,11 +28,11 @@ fi
 
 read -p " E-mail   : " EMAIL1
 if [ -z $EMAIL1 ]; then
-echo -e "  ${NC}   [INFO] Please Input Your Github Email Adress"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
-echo -e "  ${WH}                 • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${UNG}   [INFO] Please Input Your Github Email Adress"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}                 • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -39,11 +40,11 @@ fi
 
 read -p " Username : " USERNAME1
 if [ -z $USERNAME1 ]; then
-echo -e "  ${NC}   [INFO] Please Input Your Github Username"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
-echo -e "  ${WH}                 • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${UNG}   [INFO] Please Input Your Github Username"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}                 • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 menu-ip
@@ -51,11 +52,11 @@ fi
 
 read -p " API      : " API1
 if [ -z $API1 ]; then
-echo -e "  ${NC}  [INFO] Please Input Your Github API"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐"
-echo -e "  ${WH}                 • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${UNG}  [INFO] Please Input Your Github API"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}                 • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
 m-ip
@@ -67,18 +68,18 @@ echo "$USERNAME1" > /etc/github/username
 echo "$API1" > /etc/github/api
 echo "ON" > /etc/github/gitstat
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${NC}   [INFO] Github Api Setup Successfully"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${UNG}            • REGISTER IPVPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}   [INFO] Github Api Setup Successfully"
 echo -e "  ${NC}   • Email : $EMAIL1"
 echo -e "  ${NC}   • User  : $USERNAME1"
 echo -e "  ${NC}   • API   : $API1"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}                  • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}                  • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -86,19 +87,19 @@ m-ip
 
 function viewapi(){
     clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}           • LIST REGISTER IP •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}           • LIST REGISTER IP •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${NC}  • Email : $EMAILGIT"
 echo -e "  ${NC}  • User  : $USERGIT"
 echo -e "  ${NC}  • API   : $APIGIT"
 echo -e "  ${NC}  • All U need Is Create a new repository "
 echo -e "  ${NC}    & Nammed : permission "
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}                 • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}                 • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -106,10 +107,10 @@ m-ip
 
 function add_ip(){
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${UNG}            • REGISTER IPVPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 rm -rf /root/permission
 read -p "   NEW IPVPS : " daftar
 echo -e "  ${NC}"
@@ -117,11 +118,11 @@ echo -e "  ${NC}  [INFO] Checking the IPVPS!"
 sleep 1
 REQIP=$(curl -sS https://raw.githubusercontent.com/${USERGIT}/permission/main/ipmini | awk '{print $4}' | grep $daftar)
 if [[ $daftar = $REQIP ]]; then
-echo -e "  ${NC}  [INFO] VPS IP Already Registered!!"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}                 • MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${IJO}  [INFO] VPS IP Already Registered!!"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
+echo -e "  ${IJO}                 • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip
@@ -131,9 +132,9 @@ echo -e "  ${NC}  [INFO] Lets Regester it!"
 sleep 3
 clear
 fi
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}            • REGISTER IPVPS •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${IJO}            • REGISTER IPVPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 read -p "   User Name  : " client
 if [ -z $client ]; then
@@ -478,23 +479,23 @@ clear
 echo -e " ┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${NC}              ${WH}• PREMIUM USER ONLY •              ${NC}   $NC"
 echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${NC} [INFO] Only PRO Users Can Use This Panel"
 echo -e "  ${NC} [INFO] Buy Premium Membership : "
-echo -e "  ${NC} [INFO] PM : https://wa.me/085754292950"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}• MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "  ${NC} [INFO] PM : https://wa.me/083120857907"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌───────────────────────────────────────────┐${NC}"
+echo -e "  $IJO                • MasWayVPN •   $NC"
+echo -e " ${BR}└───────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ip  
 fi
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${IJO}          • REGISTER IPVPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 GITREQ=/etc/github/gitstat
 if [ -f "$GITREQ" ]; then
     cekk="ok"
@@ -507,15 +508,15 @@ fi
 stst1=$(cat /etc/github/gitstat)
 if [ "$stst1" = "OFF" ]; then
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}• REGISTER IPVPS •              ${NC}   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "   ${IJO}        • REGISTER IPVPS •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${NC}   • You Need To Set Github API First!"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}• MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}        • MasWayVPN •   ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to Set API"
 setapi
@@ -535,16 +536,14 @@ else
 ISON=""
 ressee="m-ip"
 fi
-echo -e "     [01]$NC • $APIOK          [04]$NC • RENEW IPVPS" 
-echo -e "     [02]$NC • ADD IPVPS        [05]$NC • LIST IPVPS"
-echo -e "     [03]$NC • DELETE IPVPS     [06]$NC • $ISON"
-echo -e "   "
-echo -e "     [00]$NC • GO BACK"
-
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${WH}• MasWayVPN •   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}" 
+echo -e "     $IJO[01]$NC • $APIOK           $IJO[04]$NC • RENEW IPVPS" 
+echo -e "     $IJO[02]$NC • ADD IPVPS        $IJO[05]$NC • LIST IPVPS"
+echo -e "     $IJO[03]$NC • DELETE IPVPS     $IJO[06]$NC • $ISON"
+echo -e "     $IJO[00]$NC • GO BACK"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" 
+echo -e " ${BR}┌───────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}          • MasWayVPN •   ${NC}"
+echo -e " ${BR}└───────────────────────────────────────────┘${NC}" 
 echo -e ""
 echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in

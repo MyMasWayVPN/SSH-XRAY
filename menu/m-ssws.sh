@@ -2,11 +2,11 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
-RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -70,20 +70,20 @@ red "Permission Denied!"
 exit 0
 fi
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}            • SSWS PANEL MENU •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e "  ┌───────────────────────────────────────────────┐${NC}"
-echo -e "   ${WH}[ 01$]${NC}  • ${WH}ADD SSWS${NC}"
-echo -e "   ${WH}[ 04$]${NC}  • ${WH}DELETE SSWS${NC}"
-echo -e "   ${WH}[ 02$]${NC}  • ${WH}RENEW SSWS${NC}"
-echo -e "   ${WH}[ 05$]${NC}  • ${WH}USER ONLINE${NC}"
-echo -e "   ${WH}[ 03$]${NC}  • ${WH}TRIAL SSWS${NC}"
-echo -e "   ${WH}[ 00$]${NC}  • ${WH}GO BACK${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e "  ${BR}┌───────────────────────────────────────────────┐${NC}"
+echo -e "   ${IJO}[ 01 ]${NC}  • ${UNG}ADD SSWS${NC}"
+echo -e "   ${IJO}[ 04 ]${NC}  • ${UNG}DELETE SSWS${NC}"
+echo -e "   ${IJI}[ 02 ]${NC}  • ${UNG}RENEW SSWS${NC}"
+echo -e "   ${IJO}[ 05 ]${NC}  • ${UNG}USER ONLINE${NC}"
+echo -e "   ${IJO}[ 03 ]${NC}  • ${UNG}TRIAL SSWS${NC}"
+echo -e "   ${IJO}[ 00 ]${NC}  • ${UNG}GO BACK${NC}"
 echo -e "  └───────────────────────────────────────────────┘${NC}"
-echo -e " ┌──────────────────${WH}BY${NC}───────────────────┐"
+echo -e " ${BR}┌────────────────────────────────────┐${NC}"
 echo -e "  ${WH}            • MasWayVPN •                    ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
