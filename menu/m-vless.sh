@@ -48,7 +48,7 @@ fi
 PERMISSION () {
     MYIP=$(curl -sS ipv4.icanhazip.com)
     IZIN=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$MYIP" ]; then
+    if [ "$MYIP" = "$IZIN" ]; then
     Bloman
     else
     res="Permission Denied!"
