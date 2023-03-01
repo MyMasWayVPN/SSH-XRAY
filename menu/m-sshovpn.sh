@@ -145,7 +145,8 @@ today=`date -d "0 days" +"%Y-%m-%d"`
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
-
+Name=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | grep $MYIP | awk '{print $2}')
+#
 echo -e "${BR}┌─────────────────────────────────────────────────┐"
 echo -e "${BR}│  ${NC}               PANEL SSH                ${BR}│${NC}"
 echo -e "${BR}└─────────────────────────────────────────────────┘"
