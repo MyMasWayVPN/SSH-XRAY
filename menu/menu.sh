@@ -92,8 +92,6 @@ trtls=$(grep -c -E "^#trojan " "/usr/local/etc/xray/trojan.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
-Name=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | grep $MYIP | awk '{print $2}')
-#
 clear
 
 echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
@@ -177,9 +175,7 @@ echo -e "${BR}     ┌───────────────────�
 echo -e "${IJO}                   LIST ACCOUNTS${NC}"
 echo -e "${BR}       —————————————————————————————————————${NC}"
 echo -e "${UNG}          SSH/OPENVPN${NC}    : ${IJO}$total_ssh${NC} "
-echo -e "${UNG}          VMESS${NC}          : ${IJO}$vmess${NC}"
-echo -e "${UNG}          VLESS${NC}          : ${IJO}$vless${NC}"
-echo -e "${UNG}          TROJAN${NC}         : ${IJO}$trtls${NC}"
+echo -e "${UNG}          XRAY${NC}           : ${IJO}$vmess${NC}"
 echo -e "${BR}     └───────────────────────────────────────┘${NC}"
 echo -e "${BR}   ┌───────────────────────────────────────────┐${NC}"
 echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver) Latest Version${NC}"
@@ -214,3 +210,4 @@ case $opt in
 00 | 0) clear ; menu ;;
 *) clear ; menu ;;
 esac
+

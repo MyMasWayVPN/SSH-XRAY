@@ -145,8 +145,7 @@ today=`date -d "0 days" +"%Y-%m-%d"`
 d1=$(date -d "$exp" +%s)
 d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
-Name=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github.io/main/wkwkwkwk | grep $MYIP | awk '{print $2}')
-#
+
 echo -e "${BR}┌─────────────────────────────────────────────────┐"
 echo -e "${BR}│  ${NC}               PANEL SSH                ${BR}│${NC}"
 echo -e "${BR}└─────────────────────────────────────────────────┘"
@@ -166,9 +165,9 @@ echo -e "${BR}   └────────────────────
 echo -e "${RED} —————————————————————————————————————————————————${NC}"
 echo -e "${BR}┌─────────────────────────────────────────────────┐${NC}"
 echo -e "${IJO}   1.)${NC}☞${UNG}ADD SSH${NC}             ${IJO}6.)${NC}☞${UNG}USER LIST${NC}"
-echo -e "${BR}│${NC} ${IJO} 2.)${NC}☞${UNG}TRIAL SSH${NC}           ${IJO}7.)${NC}☞${UNG}DELETE USER EXP${NC}                 ${BR}│${NC}"
+echo -e "${BR}│${NC} ${IJO} 2.)${NC}☞${UNG}TRIAL SSH${NC}           ${IJO}7.)${NC}☞${UNG}DELETE USER EXP${NC}"
 echo -e "${IJO}   3.)${NC}☞${UNG}RENEW SSH${NC}           ${IJO}8.)${NC}☞${UNG}SET AUTO KILL${NC}"
-echo -e "${BR}│ ${NC} ${IJO}4.)${NC}☞${UNG}DELETE SSH${NC}          ${IJO}9.)${NC}☞ ${UNG}CHECK MULOG${NC}               ${BR}│${NC}"
+echo -e "${BR}│ ${NC} ${IJO}4.)${NC}☞${UNG}DELETE SSH${NC}          ${IJO}9.)${NC}☞ ${UNG}CHECK MULOG${NC}"
 echo -e "${IJO}   5.)${NC}☞${UNG}CHECK USER${NC}"
 echo -e "${BR}└─────────────────────────────────────────────────┘${NC}"
 echo -e "${RED}—————————————————————————————————————————————————${NC}"
