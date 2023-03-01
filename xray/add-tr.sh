@@ -85,7 +85,7 @@ echo -e "  ${RED}          • Add Trojan Account •             ${NC}"
 echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 
 		read -rp "User: " -e user
-		user_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+		user_EXISTS=$(grep -w $user /etc/xray/trojan.json | wc -l)
 
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
