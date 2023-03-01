@@ -2,12 +2,12 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
-RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
@@ -73,7 +73,7 @@ clear
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Shadowsocks WS TLS" | cut -d: -f2|sed 's/ //g')"
 ntls="$(cat ~/log-install.txt | grep -w "Shadowsocks WS none TLS" | cut -d: -f2|sed 's/ //g')"
-user=♡TARAP-KUHING♡`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=MasWayVPN`</dev/urandom tr -dc X-Z0-9 | head -c4`
 cipher="aes-128-gcm"
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
@@ -92,37 +92,34 @@ shadowsockslink1="ss://${shadowsocks_base64e}@${domain}:$tls?mode=gun&security=t
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}         • TRIAL ACCOUNT SSWS •              ${NC}   $NC" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Remarks       : ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Domain        : ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Wildcard      : ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port TLS      : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port none TLS : ${WH}${ntls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port gRPC     : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Password      : ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Ciphers       : ${WH}${cipher}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Network       : ${WH}ws/grpc" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Path          : ${WH}/ss-ws" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ServiceName   : ${WH}ss-grpc" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Link TLS      : ${WH}${shadowsockslink}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Link none TLS : ${WH}${shadowsockslink1}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Link gRPC     : ${WH}${shadowsockslink2}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}Expired On    : ${WH}$exp" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌────────────────────── ${WH}BY───────────────────┐${NC}"
-echo -e "  ${WH}               • MasWayVPN •                 ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${RED}         • TRIAL ACCOUNT SSWS •              ${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Remarks       : ${NC}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Domain        : ${NC}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Wildcard      : ${NC}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port TLS      : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port none TLS : ${NC}${ntls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port gRPC     : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Password      : ${NC}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Ciphers       : ${NC}${cipher}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNH} Network       : ${NC}ws/grpc" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Path          : ${NC}/ss-ws" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} ServiceName   : ${NC}ss-grpc" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}Link TLS      : ${NC}${shadowsockslink}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}Link none TLS : ${NC}${shadowsockslink1}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}Link gRPC     : ${NC}${shadowsockslink2}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${RED}Expired On    : ${NC}$exp" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 menu

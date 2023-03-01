@@ -2,11 +2,12 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -82,23 +83,23 @@ fi
 tls="$(cat ~/log-install.txt | grep -w "Vmess WS TLS" | cut -d: -f2|sed 's/ //g')"
 none="$(cat ~/log-install.txt | grep -w "Vmess WS none TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}        • Add Vmess Account •                ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${RED}        • Add Vmess Account •                ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 
 		read -rp "User: " -e user
 		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-            echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-            echo -e "  ${WH}       • Add Vmess Account •                 ${NC}"
-            echo -e " └─────────────────────────────────────────────────┘${NC}"
-            echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+            echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+            echo -e "  ${RED}       • Add Vmess Account •                 ${NC}"
+            echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+            echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
             echo ""
             echo -e " A client with the specified name was already created, please choose another name."
             echo ""
-            echo -e " └─────────────────────────────────────────────────┘${NC}"
+            echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
             read -n 1 -s -r -p "Press any key to back on menu"
 v2ray-menu
 		fi
@@ -175,40 +176,37 @@ vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC}              ${WH}• CREATE VMESS USER •              ${NC}   $NC" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Remarks        : ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Domain         : ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Wildcard       : ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Port TLS       : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Port none TLS  : ${WH}80,8080" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Port gRPC      : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}id             : ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}alterId        : ${WH}0" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Security       : ${WH}auto" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Network        : ${WH}ws" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Path           : ${WH}/vmess" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Path Support   : ${WH}/worryfree" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}ServiceName    : ${WH}vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC}  Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}${vmesslink1}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC}  Link Websocket None TLS ${WH}: ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC}  Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC} ${WH}Expired On      : ${WH}$exp" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${NC}                ${WH}• BY MasWayVPN •${NC}                   $NC" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${RED}         • CREATE VMESS USER •              ${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Remarks        : ${NC}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Domain         : ${NC}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Wildcard       : ${NC}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Port TLS       : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Port none TLS  : ${NC}80,8080" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Port gRPC      : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}id             : ${NC}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}alterId        : ${NC}0" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Security       : ${NC}auto" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Network        : ${NC}ws" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Path           : ${NC}/vmess" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}Path Support   : ${NC}/worryfree" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}ServiceName    : ${NC}vmess-grpc" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}  Link Websocket TLS      :${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}${vmesslink1}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}  Link Websocket None TLS : ${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG}  Link Websocket GRPC     : ${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${RED}Expired On      : ${NC}$exp" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on menu"
 

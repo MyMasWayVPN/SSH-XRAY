@@ -2,11 +2,11 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
-RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 WH='\033[1;37m'
 ###########- END COLOR CODE -##########
 
@@ -93,7 +93,7 @@ asu=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
@@ -108,7 +108,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "",
+      "host": "${domain}",
       "tls": "none"
 }
 EOF`
@@ -123,7 +123,7 @@ grpc=`cat<<EOF
       "net": "grpc",
       "path": "vmess-grpc",
       "type": "none",
-      "host": "",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
@@ -138,42 +138,42 @@ service cron restart > /dev/null 2>&1
 clear
 
 
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}            • TRIAL VMESS •              ${NC}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Remarks       : ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Domain        : ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Wildcard      : ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port TLS      : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port none TLS : ${WH}80,8080" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port gRPC     : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} id            : ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} alterId       : ${WH}0" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Security      : ${WH}auto" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Network       : ${WH}ws" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Path          : ${WH}/vmess" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Path Support  : ${WH}/worryfree" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ServiceName   : ${WH}vmess-grpc" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH}  Link Websocket TLS      ${WH}:${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ${WH}${vmesslink1}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}  Link Websocket None TLS ${WH}: ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ${WH}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH} Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Expired On      : ${WH}$exp" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Remarks       : ${NC}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Domain        : ${NC}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Wildcard      : ${NC}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port TLS      : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port none TLS : ${NC}80,8080" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port gRPC     : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} id            : ${NC}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} alterId       : ${NC}0" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Security      : ${NC}auto" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Network       : ${NC}ws" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Path          : ${NC}/vmess" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Path Support  : ${NC}/worryfree" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} ServiceName   : ${NC}vmess-grpc" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${IJO}  Link Websocket TLS      :${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}${vmesslink1}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}  Link Websocket None TLS : ${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${WH}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO} Link Websocket GRPC     : ${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${RED} Expired On      : ${NC}$exp" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}             • BY MasWayVPN •${NC}           $NC" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu

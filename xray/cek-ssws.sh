@@ -2,12 +2,13 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
@@ -72,10 +73,10 @@ fi
 clear
 echo -n > /tmp/other.txt
 data=( `cat /etc/xray/config.json | grep '^##' | cut -d ' ' -f 2 | sort | uniq`);
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}           • SSWS USER ONLINE •              ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${RED}           • SSWS USER ONLINE •              ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
 
 for akun in "${data[@]}"
 do
@@ -110,10 +111,10 @@ rm -rf /tmp/ipssws.txt
 done
 
 rm -rf /tmp/other.txt
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌────────────────────── ${WH}BY${NC}  ───────────────────────┐${NC}"
-echo -e "  ${NC}                ${WH}• MasWayVPN •${NC}                   $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└────────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────┐${NC}"
+echo -e " ${RED}             • MasWayVPN •                ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────┘${NC}"
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
 m-ssws

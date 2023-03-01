@@ -2,12 +2,13 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
 RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 ###########- END COLOR CODE -##########
 
 BURIQ () {
@@ -87,36 +88,33 @@ trojanlink1="trojan://${uuid}@${domain}:${tls}?mode=gun&security=tls&type=grpc&s
 trojanlink="trojan://${uuid}@isi_bug_disini:${tls}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws&sni=${domain}#${user}"
 trojanlink2="trojan://${uuid}@isi_bug_disini:${ntls}?path=%2Ftrojan-ws&security=tls&host=${domain}&type=ws#${user}"
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "  ${WH}           • TRIAL TROJAN •                     ${NC}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 echo -e "  ${WH} "
-echo -e " ┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Remarks       : ${WH}${user}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Host/IP       : ${WH}${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Wildcard      : ${WH}(bug.com).${domain}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port TLS      : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port none TLS : ${WH}${ntls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Port gRPC     : ${WH}${tls}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Key           : ${WH}${uuid}" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} Path          : ${WH}/trojan-ws" | tee -a /etc/log-create-user.log
-echo -e "  ${WH} ServiceName   : ${WH}trojan-grpc" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}Link TLS      : ${WH}${trojanlink}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}Link none TLS : ${WH}${trojanlink2}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}Link gRPC     : ${WH}${trojanlink1}" | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}Expired On    : ${WH}$exp"            | tee -a /etc/log-create-user.log
-echo -e " └─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e " ┌────────────────────── ${WH}BY───────────────────┐${NC}"
-echo -e "  ${WH}               • MasWayVPN•                  ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Remarks       : ${NC}${user}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Host/IP       : ${NC}${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Wildcard      : ${NC}(bug.com).${domain}" | tee -a /etc/log-create-user.log
+echo -e "  ${UMH} Port TLS      : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port none TLS : ${NC}${ntls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Port gRPC     : ${NC}${tls}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Key           : ${NC}${uuid}" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} Path          : ${NC}/trojan-ws" | tee -a /etc/log-create-user.log
+echo -e "  ${UNG} ServiceName   : ${NC}trojan-grpc" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}Link TLS      : ${NC}${trojanlink}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}Link none TLS : ${NC}${trojanlink2}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${IJO}Link gRPC     : ${NC}${trojanlink1}" | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+echo -e " ${¤BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${RED}Expired On    : ${NC}$exp"            | tee -a /etc/log-create-user.log
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 
