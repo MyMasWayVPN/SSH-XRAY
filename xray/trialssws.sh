@@ -73,7 +73,7 @@ clear
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Shadowsocks WS TLS" | cut -d: -f2|sed 's/ //g')"
 ntls="$(cat ~/log-install.txt | grep -w "Shadowsocks WS none TLS" | cut -d: -f2|sed 's/ //g')"
-user=MasWayVPN`</dev/urandom tr -dc X-Z0-9 | head -c4`
+user=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
 cipher="aes-128-gcm"
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
