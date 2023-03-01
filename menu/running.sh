@@ -3,13 +3,12 @@ GREEN#!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
-export NC="\e[0m"
-export YELLOW='\033[0;33m';
-export RED="\033[0;31m"
-export COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-export COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+NC="\e[0m"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 ###########- END COLOR CODE -##########
 tram=$( free -h | awk 'NR==2 {print $2}' )
 uram=$( free -h | awk 'NR==2 {print $3}' )
@@ -338,28 +337,28 @@ Name=$(curl -sS https://raw.githubusercontent.com/MyMasWayVPN/MyMasWayVPN.github
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e ""
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}         ⇱ SYSTEM INFORMATION ⇲                ${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}❇️ Hostname     : ${NC}$HOSTNAME"
 echo -e "  ${WH}❇️ OS Name      : ${NC}$Tipe"
 echo -e "  ${WH}❇️ Total RAM    : ${NC}${totalram}MB"
 echo -e "  ${WH}❇️ Public IP    : ${NC}$MYIP"
 echo -e "  ${WH}❇️ Domain       : ${NC}$Domen"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}       ⇱ SUBSCRIPTION INFORMATION ⇲            ${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}❇️ Client Name  : $Name${NC}"
 echo -e "  ${WH}❇️ License      : $certificate days${NC}"
 echo -e "  ${WH}❇️ Version      : $(cat /opt/.ver) Latest Version${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}        ⇱ SERVICE INFORMATION ⇲                ${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌───────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}❇️ SSH / TUN                : $status_ssh${NC}"
 echo -e "  ${WH}❇️ OpenVPN                  : $status_openvpn${NC}"
 echo -e "  ${WH}❇️ Dropbear                 : $status_beruangjatuh${NC}"
@@ -380,10 +379,4 @@ echo -e "  ${WH}❇️ OHP Dropbear             : $sohp${NC}"
 echo -e "  ${WH}❇️ OHP OpenVPN              : $sohq${NC}"
 echo -e "  ${WH}❇️ OHP SSH                  : $sohr${NC}"
 echo -e "  ${WH}❇️ SSL / SSH Multiplexer    : $sosslh${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
-echo -e " ┌───────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}             ♧ SCRIPT ♧                        ${NC}"
-echo -e "  ${WH}            ♤ PREMIUM ♤                        ${NC}"
-echo -e "  ${WH}            ◇   BY   ◇                        ${NC}"
-echo -e "  ${WH}          ♡ MasWayVPN ♡                        ${NC}"
-echo -e " └───────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}└───────────────────────────────────────────────────┘${NC}"
