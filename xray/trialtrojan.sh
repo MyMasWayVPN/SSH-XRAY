@@ -74,14 +74,14 @@ clear
 domain=$(cat /etc/xray/domain)
 tls="$(cat ~/log-install.txt | grep -w "Trojan WS TLS" | cut -d: -f2|sed 's/ //g')"
 ntls="$(cat ~/log-install.txt | grep -w "Trojan WS none TLS" | cut -d: -f2|sed 's/ //g')"
-user=♤TARAP-KUHING♤`</dev/urandom tr -dc X-Z-0-9 | head -c4`
+user=trial`</dev/urandom tr -dc X-Z-0-9 | head -c4`
 uuid=$(cat /proc/sys/kernel/random/uuid)
 masaaktif=1
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#trojanws$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/trojan.json
 sed -i '/#trojangrpc$/a\#! '"$user $exp"'\
-},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
+},{"password": "'""$uuid""'","email": "'""$user""'"' /etc/xray/trojan.json
 
 systemctl restart xray
 trojanlink1="trojan://${uuid}@${domain}:${tls}?mode=gun&security=tls&type=grpc&serviceName=trojan-grpc&sni=bug.com#${user}"
