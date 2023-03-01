@@ -1,6 +1,6 @@
 #!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
-biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+biji=`date +"%Y-%m-%d-%h" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 colornow=$(cat /etc/tarap/theme/color.conf)
 GM="\e[36m"
@@ -93,8 +93,8 @@ OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{prin
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
 
-Login=♡TARAP-KUHING♡`</dev/urandom tr -dc X-Z0-9 | head -c4`
-hari="1"
+Login=trial`</dev/urandom tr -dc X-Z0-9 | head -c4`
+hari="1h"
 Pass=1
 echo Ping Host
 echo Create Akun: $Login
@@ -102,7 +102,7 @@ sleep 0.5
 echo Setting Password: $Pass
 sleep 0.5
 clear
-useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
+useradd -e `date -d "$masaaktif days" +"%Y-%m-%d-%h"` -s /bin/false -M $Login
 exp="$(chage -l $Login | grep "Account expires" | awk -F": " '{print $2}')"
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 PID=`ps -ef |grep -v grep | grep sshws |awk '{print $2}'`
