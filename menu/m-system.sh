@@ -2,12 +2,12 @@
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-colornow=$(cat /etc/tarap/theme/color.conf)
 NC="\e[0m"
-RED="\033[0;31m"
-COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
-COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
 WH='\033[1;37m'
+IJO='\e[1;32m'
+BR='\e[1;36m'
+RED='\e[1;31m'
+UNG='\e[1;34m'
 ###########- END COLOR CODE -##########
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
@@ -32,26 +32,26 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  =${WH}            • SYSTEM MENU •                 ${NC}"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
-echo -e " ┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}[ 01 ]${NC}  • ${WH}CHANGE DOMAIN${NC}"
-echo -e "  ${WH}[ 02 ]${NC}  • ${WH}SPEEDTEST$NC"
-echo -e "  ${WH}[ 03 ]${NC}  • ${WH}AUTO REBOOT${NC}"
-echo -e "  ${WH}[ 04 ]${NC}  • ${WH}RESTART VPS${NC}"
-echo -e "  ${WH}[ 05 ]${NC}  • ${WH}CEK BANDWITH${NC}"
-echo -e "  ${WH}[ 06 ]${NC}  • ${WH}INSTALL TCP BBR${NC}"
-echo -e "  ${WH}[ 07 ]${NC}  • ${WH}IP$NC"
-echo -e "  ${WH}[ 08 ]${NC}  • ${WH}WEBMIN MENU $NC"
-echo -e "  ${WH}[ 09 ]${NC}  • ${WH}LIMIT SPEED SERVER $NC"
-echo -e "  ${WH}[ 10 ]${NC}  • ${WH}AUTO BACKUP DATA $NC"
-echo -e "  ${WH}[ 11 ]${NC}  • ${WH}BACKUP DATA $NC"
-echo -e "  ${WH}[ 12 ]${NC}  • ${WH}RESTORE DATA $NC"
-echo -e "  ${WH}[ 13 ]${NC}  • ${WH}SET BANNER"
-echo -e "  ${WH}[ 14 ]${NC}  • ${WH}DNS"
-echo -e "  ${WH}[ 00 ]${NC}  • ${WH}GO BACK $NC"
-echo -e " └─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${RED}                • SYSTEM MENU •                 ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
+echo -e " ${BR}┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ❇${IJO}[ 01 ]${NC} ⏩ • ${UNG}CHANGE DOMAIN${NC}"
+echo -e "  ❇${IJO}[ 02 ]${NC} ⏩ • ${UNG}SPEEDTEST${NC}"
+echo -e "  ❇${IJO}[ 03 ]${NC} ⏩ • ${UNG}AUTO REBOOT${NC}"
+echo -e "  ❇${IJO}[ 04 ]${NC} ⏩ • ${UNG}RESTART VPS${NC}"
+echo -e "  ❇${IJO}[ 05 ]${NC} ⏩ • ${UNG}CEK BANDWITH${NC}"
+echo -e "  ❇${IJO}[ 06 ]${NC} ⏩ • ${UNG}INSTALL TCP BBR${NC}"
+echo -e "  ❇${IJO}[ 07 ]${NC} ⏩ • ${UNG}IP${NC}"
+echo -e "  ❇${IJO}[ 08 ]${NC} ⏩ • ${UNG}WEBMIN MENU ${NC}"
+echo -e "  ❇${IJO}[ 09 ]${NC} ⏩ • ${UNG}LIMIT SPEED SERVER ${NC}"
+echo -e "  ❇${IJO}[ 10 ]${NC} ⏩ • ${UNG}AUTO BACKUP DATA ${NC}"
+echo -e "  ❇${IJO}[ 11 ]${NC} ⏩ • ${UNG}BACKUP DATA ${NC}"
+echo -e "  ❇${IJO}[ 12 ]${NC} ⏩ • ${UNG}RESTORE DATA ${NC}"
+echo -e "  ❇${IJO}[ 13 ]${NC} ⏩ • ${UNG}SET BANNER${BRMLMMMMMM}"
+echo -e "  ❇${IJO}[ 14 ]${NC} ⏩ • ${UNG}DNS${NC}"
+echo -e "  ❇${IJO}[ 00 ]${NC} ⏩ • ${UNG}GO BACK ${NC}"
+echo -e " ${BR}└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu  : ${WH}"; read opt
 case $opt in
