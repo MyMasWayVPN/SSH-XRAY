@@ -2,11 +2,11 @@
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 
-DOMAIN=masway-vpn.my.id
+DOMAIN=mwvpn.tech
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 #subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
-dns=${sub}.masway-vpn.my.id
-#NS_dns=${subsl}.masway-vpn.my.id
+dns=${sub}.mwvpn.tech
+#NS_dns=${subsl}.mwvpn.tech
 CF_ID=akunabal.abal7770@gmail.com
 CF_KEY=4502348bc050806208bb10e3a1af5b9d1d018
 set -euo pipefail
