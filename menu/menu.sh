@@ -84,7 +84,7 @@ else
     status_xray="${RED}OFF${NC}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/config.json")
+vmess=$(grep -c -E "^#vmess " "/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
 vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
 # TOTAL ACC CREATE  TROJAN
@@ -178,7 +178,7 @@ echo -e "${UNG}          SSH/OPENVPN${NC}    : ${IJO}$total_ssh${NC} "
 echo -e "${UNG}          XRAY${NC}           : ${IJO}$vmess${NC}"
 echo -e "${BR}     └───────────────────────────────────────┘${NC}"
 echo -e "${BR}   ┌───────────────────────────────────────────┐${NC}"
-echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver) Latest Version${NC}"
+echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver)${NC}"
 echo -e "${BR}   │${NC}  ${UNG}Client Name${NC} : ${IJO}$Name${NC}"
 echo -e "${BR}   │${NC}  ${UNG}Expiry In${NC}   : ${IJO}$certificate days${NC}"
 echo -e "${BR}   └───────────────────────────────────────────┘${NC}"
