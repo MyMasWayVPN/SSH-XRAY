@@ -94,7 +94,7 @@ else
     status_xray="${RED}OFF${NC}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/config.json")
+vmess=$(grep -c -E "^#vmess " "/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
 vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
 # TOTAL ACC CREATE  TROJAN
