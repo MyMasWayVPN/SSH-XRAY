@@ -29,7 +29,7 @@ wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/MyMasWayVPN
 chmod +x /usr/local/bin/ws-dropbear
 
 # Installing Service
-cat > /etc/systemd/system/ws-nontls.service << END
+cat > /etc/systemd/system/ws-dropbear.service << END
 [Unit]
 Description=Python Proxy Mod By MasWayVPN
 Documentation=https://t.me/MasWayVPN
