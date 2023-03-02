@@ -158,7 +158,7 @@ echo -e "${BR}┌─────────────────────
 echo -e "${BR}│${NC} ${UNG}XRAY${NC} : ${status_xray} ${BR}│${NC} ${UNG}SSH-WS${NC} : ${status_ws} ${BR}│${NC} ${UNG}NGINX${NC} : ${status_xray} ${BR}│${NC}  ${IJO}GOOD${NC} ${BR}│${NC}"
 echo -e "${BR}└─────────────────────────────────────────────────┘"
 echo -e "${BR}   ┌───────────────────────────────────────────┐${NC}"
-echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver) Latest Version${NC}"
+echo -e "${BR}   │${NC}  ${UNG}Version${NC}     : ${IJO}$(cat /opt/.ver)${NC}"
 echo -e "${BR}   │${NC}  ${UNG}Client Name${NC} : ${IJO}$Name${NC}"
 echo -e "${BR}   │${NC}  ${UNG}Expiry In${NC}   : ${IJO}$certificate days${NC}"
 echo -e "${BR}   └───────────────────────────────────────────┘${NC}"
